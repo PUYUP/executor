@@ -37,8 +37,7 @@ case $choice in
             --gpus all \
             --init \
             --ulimit core=0 \
-            -p 8080:8070 \
-            -p 8081:8071 \
+            -p 8070:8070 \
             "grobid/grobid:${GROBID_VERSION}-full"
         ;;
     2)
@@ -49,9 +48,7 @@ case $choice in
         docker run --rm \
             --init \
             --ulimit core=0 \
-            -p 8080:8070 \
-            -p 8081:8071 \
-            -v "$(pwd)/config/grobid.yaml:/etc/grobid/config/grobid.yaml" \
+            -p 8070:8070 \
             "grobid/grobid:${GROBID_VERSION}-full"
         ;;
     3)
@@ -62,8 +59,7 @@ case $choice in
         docker run --rm \
             --init \
             --ulimit core=0 \
-            -p 8080:8070 \
-            -p 8081:8071 \
+            -p 8070:8070 \
             "grobid/grobid:${GROBID_VERSION}-crf"
         ;;
     4)

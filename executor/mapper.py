@@ -268,8 +268,20 @@ class _TeiParser:
             ))
         return refs
 
+    # Fixed _figure_refs method for DocumentMapper
+    # Add this to replace the old _figure_refs method in _TeiParser class
+
     def _figure_refs(self, root: ET.Element) -> list[GrobidFigureRef]:
+        """Parse figure and table references from TEI XML.
+        
+        Handles three cases:
+        1. Standalone <figure> elements with full structure
+        2. Orphan captions in body text (fallback)
+        3. Inline <ref type="figure"> or <ref type="table"> elements
+        """
         refs: list[GrobidFigureRef] = []
+        
+        # --- Case 1: Standalone <figure> elements ---
         for fig in root.findall(".//tei:figure", _NS):
             fig_id = fig.get("{http://www.w3.org/XML/1998/namespace}id")
             label_el = fig.find("tei:head", _NS)
@@ -281,6 +293,70 @@ class _TeiParser:
                 caption=self._text(caption_el),
                 coords=coords,
             ))
+
+        # --- Case 2: Fallback for orphan captions in body text ---
+        body = root.find(".//tei:body", _NS)
+        if body is not None:
+            in_figure = set()
+            for fig in body.findall(".//tei:figure", _NS):
+                in_figure.update(fig.iter())
+                
+            for el in body.iter():
+                if el in in_figure:
+                    continue
+                tag = el.tag.split("}")[-1]
+                if tag in ("s", "head"):
+                    txt = self._text(el)
+                    if not txt:
+                        continue
+                    m = re.match(
+                        r"^((?:Figure|Fig\.|Table)\s*\d+)\s*[:.]\s*(.*)",
+                        txt,
+                        flags=re.IGNORECASE | re.DOTALL
+                    )
+                    if m:
+                        label, caption = m.groups()
+                        label = re.sub(r"\s+", " ", label).strip()
+                        caption = caption.strip()
+                        coords = self._parse_coords(el.get("coords"))
+                        refs.append(GrobidFigureRef(
+                            fig_id=None,
+                            label=label,
+                            caption=caption,
+                            coords=coords,
+                        ))
+
+        # --- Case 3: Inline <ref type="figure"> elements ---
+        # e.g. "Fig. <ref type="figure" coords="8,126.80,421.19,3.81,8.64">5</ref>"
+        for ref_el in root.findall(".//tei:ref[@type='figure']", _NS):
+            ref_number = self._text(ref_el)
+            if not ref_number:
+                continue
+            coords = self._parse_coords(ref_el.get("coords"))
+            label = f"Figure {ref_number}"
+            
+            refs.append(GrobidFigureRef(
+                fig_id=ref_el.get("{http://www.w3.org/XML/1998/namespace}id"),
+                label=label,
+                caption=None,  # inline refs typically don't have captions
+                coords=coords,
+            ))
+
+        # --- Case 4: Inline <ref type="table"> elements ---
+        for ref_el in root.findall(".//tei:ref[@type='table']", _NS):
+            ref_number = self._text(ref_el)
+            if not ref_number:
+                continue
+            coords = self._parse_coords(ref_el.get("coords"))
+            label = f"Table {ref_number}"
+            
+            refs.append(GrobidFigureRef(
+                fig_id=ref_el.get("{http://www.w3.org/XML/1998/namespace}id"),
+                label=label,
+                caption=None,
+                coords=coords,
+            ))
+
         return refs
 
     @staticmethod

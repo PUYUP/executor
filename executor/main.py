@@ -22,7 +22,7 @@ logging.basicConfig(
 
 
 async def process(pdf_path: Path) -> FusedDocument:
-    mapper = DocumentMapper(iou_threshold=0.25, caption_threshold=0.2)
+    mapper = DocumentMapper(iou_threshold=0.3, caption_threshold=0.2)
 
     # Run both executors concurrently — they're independent
     async with DoclingExecutor() as docling:

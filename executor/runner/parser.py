@@ -22,6 +22,9 @@ Design notes
   dependencies are required.
 * Inline TEI elements (``<ref>``, ``<formula>``, ``<figure>``, …) are
   reduced to their text content so no markup leaks into the output.
+* Coverage: abstract, body (incl. nested divs), author list, and back
+  matter (references / bibliography, appendix, acknowledgements, …) are
+  all emitted as their own sections unless explicitly skipped.
 """
 
 from __future__ import annotations
@@ -58,9 +61,9 @@ class ChunkDict(TypedDict):
     content: str
 
 
-@dataclass
+@dataclass(frozen=True, slots=True)
 class Chunk:
-    """A single text chunk ready for SPECTER2 encoding."""
+    """A single, immutable text chunk ready for SPECTER2 encoding."""
 
     section: str
     chunk: int
@@ -86,24 +89,32 @@ class ParseConfig:
     include_title: bool = True
     """Whether to prepend title text to the abstract chunk."""
 
+    include_authors: bool = True
+    """Whether to emit an "authors" section listing author names/affiliations."""
+
+    include_references: bool = True
+    """Whether to emit a "references" section from the bibliography."""
+
+    include_back_matter: bool = True
+    """Whether to walk other <back> divs (appendix, acks, ...) like body divs."""
+
     normalise_section_names: bool = True
     """Lowercase & strip numeric prefixes from section headings."""
 
     skip_sections: frozenset[str] = field(
         default_factory=lambda: frozenset(
             {
-                "acknowledgements",
-                "acknowledgments",
-                "funding",
-                "conflict of interest",
-                "competing interests",
-                "author contributions",
-                "supplementary",
-                "appendix",
+                # Left empty by default so "all sections" really means all.
+                # Add headings here (normalised, lowercase) to exclude them,
+                # e.g. {"acknowledgements", "funding"}.
             }
         )
     )
-    """Section headings (normalised) to exclude from the output."""
+    """Section headings (normalised) to exclude from the output.
+
+    Note: this does NOT apply to the dedicated "authors" / "references"
+    sections, which are gated by their own include_* flags instead.
+    """
 
 
 # ---------------------------------------------------------------------------
@@ -216,6 +227,96 @@ def _normalise_section(name: str) -> str:
 
 
 # ---------------------------------------------------------------------------
+# Author helpers
+# ---------------------------------------------------------------------------
+
+
+def _format_author(author_el: ET.Element) -> str:
+    """Render a single TEI <author> element as 'Name (Affiliation)' text."""
+    pers_name = author_el.find(_tag("persName"))
+    if pers_name is not None:
+        name = _element_text(pers_name)
+    else:
+        name = _element_text(author_el)
+
+    affiliations = []
+    for aff in author_el.findall(_tag("affiliation")):
+        org_names = [
+            _element_text(o) for o in aff.findall(_tag("orgName")) if _element_text(o)
+        ]
+        if org_names:
+            affiliations.append(", ".join(org_names))
+        else:
+            text = _element_text(aff)
+            if text:
+                affiliations.append(text)
+
+    email_el = author_el.find(_tag("email"))
+    email = _element_text(email_el) if email_el is not None else ""
+
+    parts = [name] if name else []
+    if affiliations:
+        parts.append(f"({'; '.join(affiliations)})")
+    if email:
+        parts.append(f"<{email}>")
+
+    return " ".join(parts).strip()
+
+
+# ---------------------------------------------------------------------------
+# Reference helpers
+# ---------------------------------------------------------------------------
+
+
+def _format_bibl_struct(bibl: ET.Element) -> str:
+    """Render a <biblStruct> bibliography entry as a single readable string."""
+    analytic = bibl.find(_tag("analytic"))
+    monogr = bibl.find(_tag("monogr"))
+
+    title_el = None
+    if analytic is not None:
+        title_el = analytic.find(_tag("title"))
+    if title_el is None and monogr is not None:
+        title_el = monogr.find(_tag("title"))
+    title = _element_text(title_el) if title_el is not None else ""
+
+    authors: list[str] = []
+    author_source = analytic if analytic is not None else monogr
+    if author_source is not None:
+        for author_el in author_source.findall(_tag("author")):
+            pers_name = author_el.find(_tag("persName"))
+            name = _element_text(pers_name) if pers_name is not None else _element_text(author_el)
+            if name:
+                authors.append(name)
+
+    date = ""
+    if monogr is not None:
+        imprint = monogr.find(_tag("imprint"))
+        if imprint is not None:
+            date_el = imprint.find(_tag("date"))
+            if date_el is not None:
+                date = date_el.get("when") or _element_text(date_el)
+
+    venue = ""
+    if monogr is not None:
+        venue_title = monogr.find(_tag("title"))
+        if venue_title is not None and venue_title is not title_el:
+            venue = _element_text(venue_title)
+
+    pieces = []
+    if authors:
+        pieces.append(", ".join(authors))
+    if title:
+        pieces.append(title)
+    if venue:
+        pieces.append(venue)
+    if date:
+        pieces.append(f"({date})")
+
+    return ". ".join(p for p in pieces if p).strip()
+
+
+# ---------------------------------------------------------------------------
 # Main parser
 # ---------------------------------------------------------------------------
 
@@ -244,20 +345,75 @@ class TEIParser:
             tei_xml: Raw TEI XML returned by :class:`~executor.grobid.GrobidExecutor`.
 
         Returns:
-            Ordered list of chunks across all sections.
+            Ordered list of chunks across all sections (abstract, authors,
+            body, references, and remaining back matter).
         """
         root = ET.fromstring(tei_xml)
         chunks: list[Chunk] = []
+
+        if self._cfg.include_authors:
+            chunks.extend(self._parse_authors(root))
+
+        if self._cfg.include_title:
+            chunks.extend(self._parse_title(root))
 
         if self._cfg.include_abstract:
             chunks.extend(self._parse_abstract(root))
 
         chunks.extend(self._parse_body(root))
+
+        if self._cfg.include_references:
+            chunks.extend(self._parse_references(root))
+
+        if self._cfg.include_back_matter:
+            chunks.extend(self._parse_back_matter(root))
+
         return chunks
 
     # ------------------------------------------------------------------
     # Section parsers
     # ------------------------------------------------------------------
+
+    def _parse_authors(self, root: ET.Element) -> list[Chunk]:
+        cfg = self._cfg
+        author_els = root.findall(
+            ".//tei:sourceDesc/tei:biblStruct/tei:analytic/tei:author", _NS
+        )
+        if not author_els:
+            # Some document types (theses, books, monographs) carry the
+            # author under monogr instead of analytic.
+            author_els = root.findall(
+                ".//tei:sourceDesc/tei:biblStruct/tei:monogr/tei:author", _NS
+            )
+        if not author_els:
+            return []
+
+        lines = [_format_author(a) for a in author_els]
+        lines = [line for line in lines if line]
+        if not lines:
+            return []
+
+        raw_chunks = _paragraphs_to_chunks(lines, cfg.max_words, min_words=1)
+        return [
+            Chunk(section="authors", chunk=i, content=text)
+            for i, text in enumerate(raw_chunks)
+        ]
+
+    def _parse_title(self, root: ET.Element) -> list[Chunk]:
+        """Extract the paper title as its own section.
+
+        Deliberately independent of whether an abstract is present —
+        GROBID sometimes fails to isolate an abstract, and previously the
+        title was only emitted as a side-effect of abstract parsing,
+        silently disappearing whenever profileDesc/abstract was absent.
+        """
+        title_el = root.find(".//tei:titleStmt/tei:title", _NS)
+        if title_el is None:
+            return []
+        title_text = _element_text(title_el)
+        if not title_text:
+            return []
+        return [Chunk(section="title", chunk=0, content=title_text)]
 
     def _parse_abstract(self, root: ET.Element) -> list[Chunk]:
         cfg = self._cfg
@@ -270,13 +426,8 @@ class TEIParser:
             for p in abstract_el.iter(_tag("p"))
             if _element_text(p)
         ]
-
-        if cfg.include_title:
-            title_el = root.find(".//tei:titleStmt/tei:title", _NS)
-            if title_el is not None:
-                title_text = _element_text(title_el)
-                if title_text:
-                    paragraphs.insert(0, title_text)
+        if not paragraphs:
+            return []
 
         raw_chunks = _paragraphs_to_chunks(paragraphs, cfg.max_words, cfg.min_words)
         return [
@@ -341,6 +492,46 @@ class TEIParser:
 
         return section_label, chunks
 
+    def _parse_references(self, root: ET.Element) -> list[Chunk]:
+        cfg = self._cfg
+        list_bibl = root.find(".//tei:text/tei:back//tei:listBibl", _NS)
+        if list_bibl is None:
+            return []
+
+        entries = [
+            _format_bibl_struct(b) for b in list_bibl.findall(_tag("biblStruct"))
+        ]
+        entries = [e for e in entries if e]
+        if not entries:
+            return []
+
+        # Each reference is short and self-contained; merge several per
+        # chunk (up to max_words) but don't drop short ones via min_words.
+        raw_chunks = _paragraphs_to_chunks(entries, cfg.max_words, min_words=1)
+        return [
+            Chunk(section="references", chunk=i, content=text)
+            for i, text in enumerate(raw_chunks)
+        ]
+
+    def _parse_back_matter(self, root: ET.Element) -> list[Chunk]:
+        """Parse remaining <back> divs (appendix, acknowledgements, etc.),
+        skipping the bibliography div already handled by _parse_references.
+        """
+        cfg = self._cfg
+        back = root.find(".//tei:text/tei:back", _NS)
+        if back is None:
+            return []
+
+        all_chunks: list[Chunk] = []
+        for div in back.findall(_tag("div")):
+            if div.find(_tag("listBibl")) is not None or div.get("type") == "references":
+                continue
+            _, chunks = self._parse_div(div)
+            if chunks:
+                all_chunks.extend(chunks)
+
+        return all_chunks
+
 
 # ---------------------------------------------------------------------------
 # Convenience function
@@ -365,6 +556,6 @@ def parse_tei_to_chunks(
         from executor.parser import parse_tei_to_chunks
 
         chunks = parse_tei_to_chunks(result.tei_xml)
-        # [{"section": "abstract", "chunk": 0, "content": "…"}, …]
+        # [{"section": "authors", "chunk": 0, "content": "…"}, …]
     """
     return [c.to_dict() for c in TEIParser(config).parse(tei_xml)]

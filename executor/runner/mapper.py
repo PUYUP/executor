@@ -32,7 +32,7 @@ import re
 from dataclasses import dataclass, field
 from xml.etree import ElementTree as ET
 
-from executor.docling_exec import AssetType, DoclingResult, ExtractedAsset
+from executor.runner.docling_exec import AssetType, DoclingResult, ExtractedAsset
 
 logger = logging.getLogger(__name__)
 

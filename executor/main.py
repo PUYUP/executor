@@ -11,9 +11,9 @@ import logging
 import sys
 from pathlib import Path
 
-from executor.docling_exec import DoclingExecutor
-from executor.grobid_exec import GrobidExecutor
-from executor.mapper import DocumentMapper, FusedDocument
+from executor.runner.docling_exec import DoclingExecutor
+from executor.runner.grobid_exec import GrobidExecutor
+from executor.runner.mapper import DocumentMapper, FusedDocument
 
 logging.basicConfig(
     level=logging.INFO,

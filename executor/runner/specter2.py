@@ -23,11 +23,11 @@ from __future__ import annotations
 import asyncio
 import logging
 from concurrent.futures import ThreadPoolExecutor
-from dataclasses import dataclass, field
+from dataclasses import dataclass
 from functools import partial
 from typing import Any
 
-from executor.parser import ChunkDict
+from executor.runner.parser import ChunkDict
 
 logger = logging.getLogger(__name__)
 

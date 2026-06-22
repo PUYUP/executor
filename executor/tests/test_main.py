@@ -1,6 +1,5 @@
 """Tests for executor.main."""
-
-from executor.main import main
+from executor.src.main import main
 
 
 def test_main_runs() -> None:

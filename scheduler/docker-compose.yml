@@ -1,0 +1,130 @@
+########################################################################
+#  ArXiv RAG Pipeline — Docker Compose (FIXED)
+########################################################################
+
+x-celery-common: &celery-common
+  build:
+    context: .
+    dockerfile: Dockerfile
+    target: final
+  env_file: .env
+  volumes:
+    - downloads:/app/downloads
+    - logs:/app/logs
+  depends_on:
+    redis:
+      condition: service_healthy
+  restart: unless-stopped
+  networks:
+    - arxiv-net
+
+
+services:
+
+  # ─── Message Broker ─────────────────────────────────────────
+  redis:
+    image: redis:7.4-alpine
+    command: >
+      redis-server
+      --maxmemory 1gb
+      --maxmemory-policy allkeys-lru
+      --save 60 1000
+      --appendonly yes
+      --appendfsync everysec
+    volumes:
+      - redis-data:/data
+    ports:
+      - "6379:6379"
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - arxiv-net
+    restart: unless-stopped
+
+
+  # ─── Beat Scheduler (cron-style task dispatch) ───────────────
+  celery-beat:
+    <<: *celery-common
+    command: >
+      celery -A src.main beat
+      --loglevel=info
+      --scheduler celery.beat.PersistentScheduler
+      --schedule /app/logs/celerybeat-schedule
+    deploy:
+      replicas: 1
+
+
+  # ─── Worker Tier 1: Scrape Queue ────────────────────────────
+  worker-scrape:
+    <<: *celery-common
+    command: >
+      celery -A src.main worker
+      --loglevel=info
+      --queues=scrape
+      --concurrency=8
+      --prefetch-multiplier=1
+      --max-tasks-per-child=100
+      --hostname=scrape@%h
+    deploy:
+      replicas: 2
+
+
+  # ─── Worker Tier 2: Process Queue ───────────────────────────
+  worker-process:
+    <<: *celery-common
+    command: >
+      celery -A src.main worker
+      --loglevel=info
+      --queues=process
+      --concurrency=4
+      --prefetch-multiplier=1
+      --max-tasks-per-child=50
+      --hostname=process@%h
+    deploy:
+      replicas: 2
+
+
+  # ─── Worker Tier 3: Embed Queue ─────────────────────────────
+  worker-embed:
+    <<: *celery-common
+    command: >
+      celery -A src.main worker
+      --loglevel=info
+      --queues=embed
+      --concurrency=2
+      --prefetch-multiplier=1
+      --max-tasks-per-child=200
+      --hostname=embed@%h
+    deploy:
+      replicas: 1
+
+
+  # ─── Flower: Real-time Task Monitor ─────────────────────────
+  flower:
+    <<: *celery-common
+    command: >
+      celery -A src.main flower
+      --port=5555
+      --url-prefix=flower
+      --max-tasks=10000
+    ports:
+      - "5555:5555"
+    depends_on:
+      - redis
+      - worker-scrape
+      - worker-process
+      - worker-embed
+
+
+volumes:
+  redis-data:
+  downloads:
+  logs:
+
+
+networks:
+  arxiv-net:
+    driver: bridge

@@ -1,8 +1,10 @@
 import json
 import os
+
+from pathlib import Path
 from datetime import datetime
 from celery_app.tasks.scrape import scrape_paper_metadata, download_pdf
-from celery_app.tasks.process import parse_pdf, clean_text, chunk_document
+from celery_app.tasks.process import parse_pdf, clean_text, chunk_document, _json_to_chunks
 
 
 def save_chunks_to_json(chunks, arxiv_id: str, output_dir: str = "output"):
@@ -26,7 +28,7 @@ def save_chunks_to_json(chunks, arxiv_id: str, output_dir: str = "output"):
     return filename
 
 
-def main():
+def main_x():
     arxiv_id = "2606.20564"
 
     result = scrape_paper_metadata(arxiv_id=arxiv_id)
@@ -40,6 +42,12 @@ def main():
     # Simpan ke JSON
     saved_path = save_chunks_to_json(chunks, arxiv_id=arxiv_id)
     print(f"File tersimpan di: {saved_path}")
+
+
+def main():
+    path = '/Volumes/SSD1/Private/Curio/indexer/executor/s12929-026-01271-w/auto/s12929-026-01271-w_content_list_v2.json'
+    chunks = _json_to_chunks(Path(path))
+    print(chunks)
 
 
 if __name__ == "__main__":

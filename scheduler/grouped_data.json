@@ -1,0 +1,1270 @@
+[
+  [
+    {
+      "type": "title",
+      "content": {
+        "title_content": [
+          {
+            "type": "text",
+            "content": "Lack of cortistatin drives neuroimmune and vascular dysfunction in brain ischemia"
+          }
+        ],
+        "level": 1
+      },
+      "paragraphs": [
+        "Julia Castillo‑González<sup>1,2,3*</sup> , Pablo Vargas‑Rodríguez<sup>1</sup>, Ignacio Serrano‑Martínez<sup>1</sup>, Alejandro Cuenca‑Martagón<sup>1</sup>, Irene Forte‑Lago<sup>1</sup>, Melanie Price<sup>2,3</sup>, Lara Buscemi<sup>2,3</sup>, Lorenz Hirt<sup>2,3</sup>, José Luis Ruiz<sup>1,4,5</sup> and Elena González‑Rey<sup>1*</sup>"
+      ],
+      "children": [
+        {
+          "type": "image",
+          "content": {
+            "image_source": {
+              "path": "images/af315876a736499dcc7b9891ac45c36b84dcec6fc4105c3720fdecc2fa884b34.jpg"
+            },
+            "image_caption": [],
+            "image_footnote": []
+          }
+        }
+      ]
+    },
+    {
+      "type": "title",
+      "content": {
+        "title_content": [
+          {
+            "type": "text",
+            "content": "Abstract"
+          }
+        ],
+        "level": 2
+      },
+      "paragraphs": [
+        "Background Ischemic stroke remains a leading cause of death and disability, with limited therapies addressing its pathophysiology. Neuroinfammation, blood–brain barrier disruption, and immune dysregulation critically contribute to both acute neuronal injury and chronic functional decline. Elucidating the endogenous factors that govern these processes and understanding the intricate interplay among them is essential for developing efective therapeutic strategies. Cortistatin, a neuropeptide expressed in the nervous and immune systems, exhibits potent immunomodulatory actions, but its role in neuroinfammatory diseases remains unclear.",
+        "Methods In this study, we combined human and murine transcriptomic analyses with a preclinical stroke model in cortistatin-defcient mice to investigate the endogenous and therapeutic roles of cortistatin during the acute (48 h) and subacute (7 days) phases of ischemic stroke.",
+        "Results We demonstrate for the frst time that cortistatin defciency amplifed ischemia-induced transcriptional programs, heightening neuroinfammation and glial/neurovascular dysfunction, and worsening neurological outcomes. Interestingly, cortistatin defciency accelerated aging-associated pathological features, underscoring its essential role in neuroimmune and cerebrovascular homeostasis. Conversely, cortistatin administration improved neuronal survival, mitigated immune dysfunction, and preserved myelin and vascular integrity during both the acute and subacute stages.",
+        "Conclusions These fndings provide the frst evidence identifying cortistatin as an endogenous neuroimmune regulator in ischemic stroke and a promising multimodal therapeutic agent for improving acute and long-term outcomes.",
+        "Keywords Ischemic stroke, Cortistatin, Neuroimmunology, Microglia, Astrocytes, Neuroinfammation, Blood–brain barrier"
+      ]
+    },
+    {
+      "type": "title",
+      "content": {
+        "title_content": [
+          {
+            "type": "text",
+            "content": "Introduction"
+          }
+        ],
+        "level": 2
+      },
+      "paragraphs": [
+        "Ischemic stroke is the second leading cause of mortality worldwide and the main contributor to adult disability [1]. Te interruption of cerebral blood fow initiates a cascade of interconnected events, including neuroinfammation, blood–brain barrier (BBB) disruption, and immune deregulation, major hallmarks of stroke pathogenesis [2]. Despite the advancements of recanalization therapies, current treatments remain limited to intravenous recombinant tissue plasminogen activator (rtPA)"
+      ]
+    }
+  ],
+  [
+    {
+      "type": "title",
+      "content": {
+        "title_content": [
+          {
+            "type": "text",
+            "content": "Materials and methods Peptides"
+          }
+        ],
+        "level": 2
+      },
+      "paragraphs": [
+        "Lyophilized mouse cortistatin (CST-29) was obtained from Bachem and dissolved in distilled water to a fnal concentration of"
+      ]
+    },
+    {
+      "type": "title",
+      "content": {
+        "title_content": [
+          {
+            "type": "text",
+            "content": "Animals"
+          }
+        ],
+        "level": 2
+      },
+      "paragraphs": [
+        "Te experimental protocols employed in this study were approved by the Animal Care and Use Board and the Ethical Committee of the Spanish National Research Council (Animal Care Unit Committee IPBLN-CSIC # protocol CEEA OCT/2017.EGR) and conducted in accordance with Directive 2010/63/EU of the European Parliament on the protection of animals used for scientifc purposes. Transgenic mice defcient in the cortistatin gene  , generously provided by Dr Luis de Lecea (Stanford University, United States), were bred and maintained on a C57BL/6 J background as previously described [12]. Mice were housed in groups of ten per cage under controlled environmental conditions (22 ± 1ºC, 60–70% relative humidity) with a 12  h light/dark cycle (lights on at  , with ad libitum access to food and water."
+      ]
+    },
+    {
+      "type": "title",
+      "content": {
+        "title_content": [
+          {
+            "type": "text",
+            "content": "Transient middle cerebral artery occlusion model"
+          }
+        ],
+        "level": 2
+      },
+      "paragraphs": [
+        "3-month-old and 6-month-old  and  male mice were evaluated. Animals from both ages were subjected to the MCAO model as previously described [19]. Tis model is a robust and highly reproducible gold-standard technique, rigorously validated in stroke research for over two decades [21–24]. It remains the most clinically relevant surgical approach to mimic human pathophysiology, also ofering superior controllability of reperfusion and no craniotomy [21]. In MCAO, blood fow is interrupted proximal to the lenticulostriate arteries, making the striatum (caudate-putamen)"
+      ],
+      "children": [
+        {
+          "type": "page_number",
+          "content": {
+            "page_number_content": [
+              {
+                "type": "text",
+                "content": "Page 2 of 27"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  [
+    {
+      "type": "title",
+      "content": {
+        "title_content": [
+          {
+            "type": "text",
+            "content": "Neurological and behavioural assessments"
+          }
+        ],
+        "level": 2
+      },
+      "paragraphs": [
+        "Te functional outcome of each mouse was evaluated using a neurological score every 24  h following MCAO and prior to sacrifce. Neurological severity was graded on a scale from 0 to 3, assessing motor, sensory, refex, and balance functions, based on a combination of established scoring systems [32].",
+        "In addition, muscle coordination and endurance were analysed using the wire-hanging test. Mice were suspended on a custom-made apparatus consisting of a single wire stretched between two posts over a soft surface. Training was conducted 24  h before surgery, and performance was evaluated at 48 h and 5 days post-MCAO, recording the number of successful reaches (defined as the mouse touching either the right or left post) or falls [33]. Te test concluded after 180 s or when a mouse fell from the wire ten times. Motor skills were further characterized using the pole test, which measured the ability of mice to grip and descend a vertical pole to a safe surface [34]. Mice underwent one training trial 24 h before surgery. Post-surgical evaluations of mice were conducted 48  h and 5  days after MCAO. Performance was scored based on successful descents or falls (reaching the mat or falling onto it, respectively). Te total time taken to reach the mat with at least two limbs, along with the number of turns required to descend, were recorded. Te test concluded after three trials, if any trial exceeded 120  s, or after three falls. Cognitive function was evaluated using the novel object recognition (NOR) test to assess long-term episodic-like memory. Behavioural performance was recorded for 10  min using a camera and analysed with automated software (SMART V3.0.06, Panlab). Prior to testing, mice underwent a 15-min habituation period in the arena. Baseline cognitive capacity was established starting 24 h before the stroke procedure; mice were frst exposed to two identical objects, followed 24 h later (30 min before the surgery) by a session where one object was replaced with a novel one. Following the stroke, the 7-day memory assessment was conducted: 6  days post-stroke, mice were again exposed to two identical objects, and 24  h later (day 7), one object was replaced by a novel object. Exploration was defned as the animal’s snout being directed toward the object within a distance of 2  cm. To quantify memory performance, the recognition index (RI) and discrimination index (DI) were calculated. Te RI was defned as the time spent exploring the novel object divided by the total exploration time (T-novel/[T-novel + T-familiar]). Te DI was calculated as the diference in exploration time between the novel and familiar objects divided by the total exploration time ([T-novel—T-familiar]/[T-novel + T-familiar]). Values approaching 1 refect a stronger and more robust memory performance."
+      ],
+      "children": [
+        {
+          "type": "page_number",
+          "content": {
+            "page_number_content": [
+              {
+                "type": "text",
+                "content": "Page 3 of 27"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  [
+    {
+      "type": "title",
+      "content": {
+        "title_content": [
+          {
+            "type": "text",
+            "content": "Ischemic lesion volume determination"
+          }
+        ],
+        "level": 2
+      },
+      "paragraphs": [
+        "At 48  h or 7  days post-MCAO, mice were sacrifced by an overdose of intraperitoneal ketamine (100  mg/kg, Ritcher Pharma) and xylazine (10 mg/kg, Fatro Iberica), followed by intracardial perfusion with 4% PFA. Brains were dissected, post-fxed in 4% PFA for 24 h at 4ºC, and then cryoprotected in 30% sucrose for 48 h at 4ºC. Subsequently, brains were frozen in isopentane on dry ice at –25ºC and stored at –80ºC until further processing. Coronal brain sections were cut at a thickness of 20 µm using a cryostat.",
+        "To assess tissue damage and quantify infarct volume, serial sections were stained with cresyl violet (CV), which is the most appropriate tool at 48  h post-stroke and beyond. Tis basic dye binds to neuronal RNA, causing healthy tissue to stain dark purple while the infarcted core appears pale or white due to the loss of cellular RNA and neuronal lysis. Te procedure followed a protocol of gradual hydration in ethanol, staining with 1 mg/ ml of CV-acetate in distilled water, gradual dehydration in ethanol, and clearing in xylene [32]. Stained sections were imaged using a Leica DM2000 Transmit stereomicroscope at 2.5 × magnifcation, and infarcted areas were measure using the ImageJ Fiji free software. Infarct volume was calculated by summing the infarcted areas from each section and multiplying by the spacing distance between sections."
+      ]
+    },
+    {
+      "type": "title",
+      "content": {
+        "title_content": [
+          {
+            "type": "text",
+            "content": "Immunofuorescence"
+          }
+        ],
+        "level": 2
+      },
+      "paragraphs": [
+        "Free-foating brain sections (20  µm-thick) were frst washed with PBS, then blocked and permeabilized using a solution of PBS 1x, 1% bovine serum albumin (BSA), 0.1% Triton X-100, and 5% goat serum for 60 min at RT. Te sections were subsequently incubated overnight at 4ºC with primary antibodies anti-MAP2 (1:1,000, Sigma MAB3418), anti-Iba1 (1:1,000, Wako 19–19741), anti-GFAP (1:5,000, Dako 20334), anti-CD31/PECAM-1 (1:300, BD550274), anti-ZO-1 (1:100, Fisher 40–2200), anti-VEGF (1:500, Abcam 52917) or APC-labelled anti-CD45 (1:200, BD 559864) diluted in PBS 1xwith 1% BSA, 0.1% Triton X-100, and 5% goat-serum. Next, sections were washed with PBS and then incubated with the appropriate Alexa Fluor-conjugated secondary antibodies (1:1,000, Sigma) and DAPI in PBS 1x, 1% BSA, 0.1% Triton X-100, and 2% goat-serum for 60 min. Sections were mounted using Mowiol. For IgG staining, the same protocol was followed, except that an Alexa Fluor 594-conjugated goat anti-mouse IgG antibody was used without a primary antibody. Images were obtained with a LEICA DMi8 S Platform Life-cell microscope at 20x magnifcation and a Leica TCS SP8 STED confocal microscope at 63x magnifcation.",
+        ""
+      ]
+    },
+    {
+      "type": "title",
+      "content": {
+        "title_content": [
+          {
+            "type": "text",
+            "content": "Morphometric analyses of microglial phenotypes"
+          }
+        ],
+        "level": 2
+      },
+      "paragraphs": [
+        "To thoroughly characterize the complex and heterogeneous morphology of microglia/infltrating macrophages following stroke, we performed extensive morphometric analyses. First, individual microglia/macrophages from specifc brain regions, such as the periinfarct area, were randomly selected. Attention was warranted to avoid cell overlap and to ensure complete capture of both the soma nucleus and cellular branches. A total of 15–30 cells per mouse from 3–6 mice (N = 3–6) were analysed. To ensure objectivity and eliminate observer bias, image processing was performed using ImageJ Fiji software, following a systematic, blinded, and automated protocol adapted from previous studies [17, 35, 36]. Initially, images were converted to 8-bit grayscale and automatically pre-processed to reduce background noise and enhance contrast. Subsequently, images were binarized using a pre-determined threshold applied consistently across all experimental groups, and non-cellular artefacts were removed using the remove outliers and despeckle functions. Manual refnement was strictly limited to the removal of noncellular artifacts and debris to ensure the accuracy of the segmentation. After image processing, morphometric parameters were obtained automatically using the Skeletonize and Fractal Analysis plugins in ImageJ Fiji [37]. For skeleton analysis, the number of junctions and maximum branch length were quantifed. For fractal analysis, key parameters included the convex hull area (the minimal convex polygon enclosing the entire cell structure), span ratio (defned as the ratio of the major to minor axes of the convex hull), and fractal dimension (an index representing cellular complexity)."
+      ]
+    },
+    {
+      "type": "title",
+      "content": {
+        "title_content": [
+          {
+            "type": "text",
+            "content": "Isolation of adult microglia and astrocytes"
+          }
+        ],
+        "level": 2
+      },
+      "paragraphs": [
+        "Adult brains from 3-month-old  and  male mice were harvested under sterile conditions and dissociated into single-cell suspensions using the Adult Brain Dissociation Kit (Miltenyi Biotec) according to the manufacturer’s instructions [38]. Briefy, after enzymatic and mechanical dissociation with the gentleMACS Dissociator, myelin, debris, and erythrocytes were removed to obtain a clean cell suspension that was used as a mixed neuron-glial culture or for obtaining individual microglia and astrocytes. Microglia were isolated by magnetic separation following enrichment with CD11b MicroBeads, whereas astrocytes were isolated using the Anti-ACSA-2 MicroBead kit. When required, Fc receptor blocking reagent was included to reduce nonspecifc binding. Purity and viability of the isolated populations were verifed by immunocytochemistry using cell type-specifc markers. Te primary mixed neuron-glial cocultures consisted of  neurons, 44 ± 2.5% astrocytes, 30 ± 2.5% oligodendrocytes, and 9 ± 1.5% microglia (mean ± SEM)."
+      ],
+      "children": [
+        {
+          "type": "page_number",
+          "content": {
+            "page_number_content": [
+              {
+                "type": "text",
+                "content": "Page 4 of 27"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  [
+    {
+      "type": "title",
+      "content": {
+        "title_content": [
+          {
+            "type": "text",
+            "content": "LPS and oxygen–glucose deprivation and reoxygenation exposure"
+          }
+        ],
+        "level": 2
+      },
+      "paragraphs": [
+        "Isolated mixed neuron-glia, microglia and astrocytes were plated at  cells/well in 24-well plates coated with poly-D-lysine (5  µg/mL) under standard culture conditions and allowed to recover before experimental manipulation. To simulate an infammatory environment, LPS from  coli 055:B5 (100 ng/ml, Sigma) was added to the cells for 24 h, after which supernatants were collected. To model oxygen–glucose deprivation and reoxygenation (OGD/R), cells were incubated in glucose-free medium under hypoxic conditions for the deprivation phase (2 h for microglia/astrocytes; 4  h for neuron-glial cultures) and subsequently returned to normoxic, glucose-containing culture conditions for the reoxygenation period (20–22  h), in the presence/absence of exogenous cortistatin (100 nM). To model ischemia-associated infammatory activation, after OGD/R for the indicated period (2/4 h + 22/20 h), cells were washed and then incubated in fresh medium supplemented with LPS (100  ng/ml, Sigma) in the presence or absence of exogenous cortistatin (100 nM) for another 24 h. Following LPS incubation, supernatants were collected, and infammatory factors were evaluated by ELISA (as described below). Nitric oxide levels were quantifed by the Griess reaction to evaluate the cellular redox state as a complementary endpoint."
+      ]
+    },
+    {
+      "type": "title",
+      "content": {
+        "title_content": [
+          {
+            "type": "text",
+            "content": "Determination of the peripheral immune response"
+          }
+        ],
+        "level": 2
+      },
+      "paragraphs": [
+        "To characterize the peripheral immune activity, we evaluated the levels of immune mediators and the spleen response. To quantify peripheral infammatory factors, blood samples were collected by cardiac puncture, allowed to clot for 2  h at RT, and then centrifuged at 2,000  rpm for 10  min. Te concentrations of the factors in serum or in supernatants from the in vitro cultures above were measured using a sandwich ELISA assay. Maxisorb plates (Millipore) were coated overnight at 4ºC with capture antibodies (anti-IL-6, anti-IL-12, anti-TNF-α from BD Pharmigen, or anti-MCP-1 from PeproTech). Plates were washed with PBS containing 0.05% Tween-20 and then blocked with PBS containing 10% fetal bovine serum (FBS) for 2 h. Serum samples and recombinant standards were added to the plates and incubated overnight at  After incubation, biotinylated detection antibodies (Serotec) were applied for 1  h at RT. Following washing, plates were incubated with avidin-HRP (Sigma) (1:500 in blocking bufer) for 1 h and developed using ABTS substrate (Sigma). Absorbance was measured at 405  nm with a spectrophotometer (Molecular Devices), and the concentrations of infammatory factors were calculated based on the standard curve generated concurrently.",
+        "",
+        "Spleens were collected, weighed, and gently dissociated into a 100 mm culture dish. Te homogenized tissue was transferred into RPMI medium supplemented with 10% FBS, 2 mM L-glutamine, 1%  and  2-mercaptoethanol. Te mixture was then allowed to sit on ice for 5  min, and the cell suspension was carefully collected and centrifuged at  rpm for 10 min at  . Te resulting pellet was resuspended in Ack lysis bufer (150 mM  , 10 mM  0.1 mM  for 10  min at RT to lyse red blood cells. RPMI medium was added, and the cells were centrifuged again at 1,670 rpm for 10 min at RT before being counted."
+      ]
+    },
+    {
+      "type": "title",
+      "content": {
+        "title_content": [
+          {
+            "type": "text",
+            "content": "RNA extraction and evaluation of gene expression"
+          }
+        ],
+        "level": 2
+      },
+      "paragraphs": [
+        "After MCAO, brains were collected at the specifed time points (i.e., 48  h and 7  days) and separated into contralateral and ipsilateral hemispheres. For RNA isolation, brain tissue was placed in TriPure reagent (Roche). cDNA synthesis from 20  ng RNA per sample was performed using the RevertAid First Strand cDNA Synthesis Kit (TermoFisher) with random hexamers in a CFX Connect QPCR System (Biorad) under the following conditions: incubation at  for 5  min, reverse transcription at  for 60  min, inactivation at  for 5  min. Gene expression analysis was performed using conventional qPCR. cDNA was added to the SensiFast Sybr No-Rox kit 1x (Bioscience), along with forward and reverse primers specifc to each gene and nuclease-free water to reach a fnal volume of 20  µl. Te qPCR reactions were run in a CFX96 thermocycler (BioRad) under the following conditions: initial polymerase activation at  for 5 min, 40 cycles at  for 30 s (denaturation),  for 30  s (primer-specifc annealing), and  for 30  s (extension). Gene expression quantifcation was performed using the comparative threshold cycle (Ct) method, with Ct values normalized to those of the housekeeping gene Rplp0. Fold change was calculated using the  method. Te specifc primers for each gene are listed in Additional File 1: Table S1."
+      ],
+      "children": [
+        {
+          "type": "page_number",
+          "content": {
+            "page_number_content": [
+              {
+                "type": "text",
+                "content": "Page 5 of 27"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  [
+    {
+      "type": "title",
+      "content": {
+        "title_content": [
+          {
+            "type": "text",
+            "content": "Next‑generation transcriptome sequencing (RNA‑seq) and data analysis"
+          }
+        ],
+        "level": 2
+      },
+      "paragraphs": [
+        "RNA (200  ng) from contralateral (CL, healthy) and ischemic  brain hemispheres isolated from  and  mice 48  h post-stroke was used to prepare mRNA libraries with the Illumina stranded mRNA Prep Ligation kit (Illumina, San Diego, CA, USA). Tree (CL) and fve (MCAO) independent biological replicates were used with RNA Integrity Number coefcients > 8.7 (Bioanalyzer RNA 6000 Nano-chip, Agilent). Quality and size distribution of mRNA libraries were validated using the Bioanalyzer High Sensitivity DNA assay, and their concentrations were measured on a Qubit fuorometer (TermoFisher). Final libraries were pooled in equimolecular ratios and converted to single-stranded circular DNA with MGIEasy Universal Library Conversion kit (MGI Tech, Shenzhen) for sequencing on MGI platforms. Te 100  bp paired-end sequencing was conducted on a DNBSEQ-G400 sequencer (MGI Tech, Shenzhen). Te average percentage of sequencing reads above a quality score of Q > 30 was 96.3%, with a mean GC content of 50.0%, and over 44 million reads per sample.",
+        "We implemented the reanalyzerGSE v3.0.0 software [39] in the RNA-seq analysis to identify diferentially expressed genes (DEGs) and to prevent the exclusion of lowly expressed genes with potential biological relevance, such as cortistatin (see details in Additional File 2). We detected > 45,000 transcripts. Multidimensional scaling (Principal Coordinates Analysis, PCoA) and unsupervised hierarchical clustering of normalized samples were performed to assess the divergence and the replicability of samples from each independent comparison. DEGs with a False Discovery Rate (FDR) < 0.05 were calculated by comparing: i)  vs.  samples for each condition (CL and MCAO); ii) MCAO vs. CL for each genotype  and  . Te log2 fold change (log FC) was used to quantify gene expression changes. To explore the functional signifcance of DEGs, we performed two diferent approaches: an over-representation analysis based on the Gene Ontology (GO) database [40, 41] and a Gene Set Enrichment Analysis (GSEA), as indicated in Additional File 2. Conventional qPCR was used to validate diferentially expressed genes selected from our transcriptomic studies.",
+        "Cell‑specifc gene sets and cell type proportion estimation Cell-type–specifc gene sets were obtained from both the default settings of the markerGeneProfle R package v1.0.4 [42] and the curated marker sets reported by Zheng et al. [43]. Both sources include overlapping gene markers for microglia, astrocytes, and oligodendrocytes; however, the astrocyte and oligodendrocyte gene sets difer in composition and biological meaning between the two approaches. Unlike other marker databases that rely on a single data source, these marker sets represent a consensus from several published studies and account for brain regional heterogeneity. We use both gene sets to estimate marker gene profles (MGPs), which serve as a proxy for relative changes in cell type proportions. Importantly, because marker gene expression can fuctuate signifcantly across diferent cellular states, this approach was not intended to quantify absolute cell populations, but instead to be used strictly as an estimation of the relative transcriptomic footprint and marker enrichment of these cell populations within the bulk tissue. For this, we used as input the transcript-per-million (TPM) normalized gene expression data from our RNAseq. Details on how MGPs were derived can be found in Additional File 2. Both gene sets were also used to assess the enrichment of our samples for the specifed cell markers by performing a GSEA as a complementary analysis.",
+        ""
+      ]
+    },
+    {
+      "type": "title",
+      "content": {
+        "title_content": [
+          {
+            "type": "text",
+            "content": "Integration of human and mouse datasets for cortistatin gene expression analysis"
+          }
+        ],
+        "level": 2
+      },
+      "paragraphs": [
+        "Cortistatin gene expression levels were obtained from the Gene Expression Omnibus database (GEO), incorporating previously published datasets from human and mouse samples following stroke. For humans, we reanalysed data from: peripheral blood mononuclear cells (PBMCs) from ischemic patients at acute and subacute stroke stages (GSE122709) [44]; and with/without haemorrhagic transformation (GSE199435) [45]; leukocytes from patients with diferential stroke severity (GSE202709) [46]; and brain tissue dissected from healthy controls and acute ischemic stroke patients post-mortem (GSE56267) [47]. Mouse data from cortical tissue were reanalysed from diferent experimental stroke models, such as the MCAO model (GSE253799, unpublished; GSE227186 [48]); cerebral venous sinus thrombosis (CVST) model (GSE245455, unpublished); and photothrombotic (PT) stroke model (GSE261613, GSE184917 [49, 50]; GSE280846, unpublished). Details about patient characteristics, stroke subtype, or time post-stroke can be found in Additional File 2."
+      ]
+    },
+    {
+      "type": "title",
+      "content": {
+        "title_content": [
+          {
+            "type": "text",
+            "content": "Ethical approval and consent to participate"
+          }
+        ],
+        "level": 2
+      },
+      "paragraphs": [
+        "Tis study involves the re-analysis of publicly available human data. Te original studies from which the data were obtained received ethical approval from their respective Institutional Review Boards (see references above). Terefore, a new ethical approval or informed consent was not required for this manuscript, in accordance with local legislation and institutional requirements regarding the secondary use of anonymous public data."
+      ],
+      "children": [
+        {
+          "type": "page_number",
+          "content": {
+            "page_number_content": [
+              {
+                "type": "text",
+                "content": "Page 6 of 27"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  [
+    {
+      "type": "title",
+      "content": {
+        "title_content": [
+          {
+            "type": "text",
+            "content": "Statistical analysis"
+          }
+        ],
+        "level": 2
+      },
+      "paragraphs": [
+        "Data are expressed as the mean ± SEM. Randomization of animals was performed using specialized software (e.g., Research Randomizer). All experiments were conducted in a blinded manner. Te number of independent animals (N), as well as the number of sections, cells, or structures analysed (n), are indicated for each experiment. Comparisons between two groups were analysed using the unpaired Student’s t test for parametric data with normal distribution or the Mann–Whitney U-test for non-parametric data. For comparisons involving three or more groups with normally distributed parametric data, one-way ANOVA with Fisher´s LSD post-hoc test was employed. For non-parametric data involving three or more groups, the Kruskal–Wallis test with a Dunn post-hoc test was used. When standard deviations were assumed to be diferent, Brown-Forsythe and Welch ANOVA tests were applied, followed by a Dunnett T3 post-hoc test. Spearman’s rho nonparametric test was used for correlation studies. All analyses were performed using GraphPad Prism v8.3.0 software. For the statistical approaches used in the sequencing data analyses, see the section above. We considered p-values < 0.05 as signifcant."
+      ]
+    },
+    {
+      "type": "title",
+      "content": {
+        "title_content": [
+          {
+            "type": "text",
+            "content": "Results"
+          }
+        ],
+        "level": 2
+      },
+      "paragraphs": []
+    },
+    {
+      "type": "title",
+      "content": {
+        "title_content": [
+          {
+            "type": "text",
+            "content": "Cortistatin is downregulated in ischemic stroke"
+          }
+        ],
+        "level": 2
+      },
+      "paragraphs": [
+        "To investigate the potential involvement of cortistatin in ischemic stroke, we frst assessed its expression levels in human samples and murine models reanalysing previously published cerebral ischemia datasets. Due to the limited availability of post-mortem human brain tissue and murine blood samples, we primarily used datasets of PBMCs and leukocytes from patients and mouse brain tissue. Our results show that cortistatin expression was markedly reduced in PBMCs in acute and subacute stroke phases and was inversely associated with stroke severity (Fig.  1A). Reanalysis of postmortem human brain samples revealed a downward trend in cortistatin levels after ischemia (Fig. 1A). Similarly, mouse brain tissue exhibited signifcant cortistatin downregulation across multiple stroke paradigms, including transient MCAO, CVST, and PT (Fig.  1B). Notably, data from the transient MCAO model used in this study, which recapitulates key features of human ischemic condition [51], also resulted in cortistatin downregulation, which was partially reversed by exogenous addition of the neuropeptide (Fig.  1C). Tese fndings implicate cortistatin downregulation as a consistent feature of ischemic stroke pathology.",
+        ""
+      ]
+    },
+    {
+      "type": "title",
+      "content": {
+        "title_content": [
+          {
+            "type": "text",
+            "content": "Defciency in cortistatin enhances immune activity, vascular disorganization, and neurodegenerative responses following ischemic stroke"
+          }
+        ],
+        "level": 2
+      },
+      "paragraphs": [
+        "Given that lower cortistatin gene expression was associated with more severe strokes, we investigated whether cortistatin defciency plays a role in stroke pathophysiology by analysing the transcriptomic profles of both cortistatin-defcient  and wild-type mice  subjected to mild MCAO.",
+        "Comparative analysis revealed minimal baseline transcriptomic diferences in non-ischemic hemispheres, with 25 DEGs (15 upregulated, 10 downregulated in  mice; FDR < 0.05) (Table  S2; Fig. S1A). Similarly, ischemic hemispheres displayed 27 DEGs between genotypes (12 upregulated, 15 downregulated in  mice), most of which were common across ischemic and healthy brain (Table  S3; Fig. S1A,B). However, GSEA of cortistatin-defcient ischemic brain samples revealed signifcant upregulation of innate immunity, antiviral defence, pattern recognition receptor signalling, proinfammatory cytokine responses (IFN-γ, IL-6, and TNF), and extracellular matrix (ECM) remodelling (Table  S4; Fig. S1C).",
+        "Next, to identify cortistatin-specifc responses to ischemia, we compared transcriptomic data from contralateral to ischemic hemispheres within each genotype (Fig.  2A).  mice exhibited 443 DEGs (419 upregulated and 24 downregulated in the injured tissue), whereas  mice showed a markedly heightened response with 1483 DEGs (1213 upregulated and 270 downregulated) (Fig.  2B; Tables S5, S6). Although substantial DEG overlap was observed between genotypes (Fig.  2C),  mice demonstrated a more robust enrichment across biological processes (BP) terms including innate and adaptive immune activation, leukocyte infltration, infammation, cell cycle progression, ERK1/ERK2, JAK-STAT and MAPK signalling, neuroinfammation, gliogenesis, ECM remodelling, angiogenesis, and ROS metabolism (Fig. 2D; Table S7). Additional enrichment was observed in cellular components (CC) related to membrane specialization, ECM structure; mitotic spindle formation, and adhesion-related protein complexes (Table  S8; Fig. S2); as well as in molecular functions (MF) such as immune receptor activity, integrin and molecular factor binding, cytoskeletal remodelling, and GTPase and kinase activity (Table S9; Fig. S3). Importantly, we validated the expression of key upregulated and downregulated genes by qPCR, showing a high degree of correlation with the RNA-seq quantifcation (Fig. S4)."
+      ],
+      "children": [
+        {
+          "type": "page_number",
+          "content": {
+            "page_number_content": [
+              {
+                "type": "text",
+                "content": "Page 7 of 27"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  [],
+  [
+    {
+      "type": "title",
+      "content": {
+        "title_content": [
+          {
+            "type": "text",
+            "content": "Ischemic stroke induces the downregulation of both cortistatin and its receptors"
+          }
+        ],
+        "level": 2
+      },
+      "paragraphs": [
+        "To understand the mechanistic basis of this vulnerability, we evaluated the availability of cortistatin-binding receptors (Sstr1–5 and Ghsr). All receptors were expressed in the brain, with Sstr4 and Sstr2 showing the highest relative levels (Fig. S5). However, ischemia induced a marked and widespread reduction in their expression in the ipsilateral hemisphere across both genotypes. Notably, although baseline levels in the contralateral hemisphere were comparable, stroke-induced receptor downregulation was more pronounced in cortistatin-defcient mice (Fig. S5). In parallel, cortistatin expression itself was strongly reduced following stroke (Fig. 1)."
+      ]
+    },
+    {
+      "type": "title",
+      "content": {
+        "title_content": [
+          {
+            "type": "text",
+            "content": "Lack of cortistatin exacerbates cell‑type marker gene profles following ischemic stroke"
+          }
+        ],
+        "level": 2
+      },
+      "paragraphs": [
+        "To elucidate genotype-dependent cellular responses to cerebral ischemia, we employed computational deconvolution of bulk transcriptomic data to perform a predictive Marker Gene Profle (MGP) analysis, estimating the relative enrichment of cell-type-specifc markers in the presence or absence of endogenous cortistatin. By using MGPs, we estimated relative shifts in specifc transcriptional signatures of neuronal, vascular, immune, and glial cell types (Fig. S6; Table S14). While this well-established bioinformatic approach does not substitute for absolute single-cell quantifcation, it provides a robust estimation of overarching population-level dynamics. Among neuronal populations, both genotypes exhibited a signifcant reduction in spiny neuron signatures following MCAO, consistent with established features of ischemic injury [52]. Notably, a selective decrease in gene markers of dentate granule neurons was observed exclusively in cortistatin-defcient mice, indicating increased vulnerability"
+      ],
+      "children": [
+        {
+          "type": "page_number",
+          "content": {
+            "page_number_content": [
+              {
+                "type": "text",
+                "content": "Page 9 of 27"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  [],
+  [
+    {
+      "type": "title",
+      "content": {
+        "title_content": [
+          {
+            "type": "text",
+            "content": "Cortistatin defciency exacerbates stroke‑induced neurodegeneration, which is mitigated after cortistatin treatment"
+          }
+        ],
+        "level": 2
+      },
+      "paragraphs": [
+        "To investigate the functional signifcance of the differential molecular pathways driven by endogenous cortistatin in stroke pathophysiology, we subjected  mice and age-matched wild-type mice to mild  and assessed acute neuropathological outcomes.",
+        "Our fndings showed that cortistatin-defcient mice exhibited a greater propensity for extensive infarcts, with 37.5% displaying lesions >  , while all  animals presented smaller lesions, as determined by CV staining (Fig.  3A,B; Table  S15). MAP-2 immunostaining confrmed signifcant pronounced neuronal injury in  mice, with > 5 mm<sup>2</sup> MAP-2-negative areas in 75% of animals, compared to only 12.5% wild-type controls (Fig.  3A,B; Table  S15). Furthermore, neurological impairment was signifcantly aggravated in  mice, with 30% scoring 2–3 (persistent circling, severe motor incoordination, tremors), whereas most of wild-type mice remained below a score of 2 (intermittent circling, moderate motor incoordination, and mild hypomobility) (Fig. 3C).",
+        "Functional defcits in cortistatin-defcient mice after stroke were further evidenced by impaired performance in wire-hanging and pole tests compared to baseline (Fig.  3D,E). Although motor defcits in the behavioural test were comparable between genotypes, cortistatindefcient mice displayed signifcantly more frequent falls (40% fell > 5 times vs. none in wild-type). Cortistatindefciency also seems to afect the success rate of reaching the post in the wire-hanging test  over 40% of cortistatin-defcient animals never reached the post, whereas 80% of wild-type animals reached it at least once) (Fig. 3D; Table S16).",
+        "Remarkably, exogenous cortistatin administration to  mice following MCAO signifcantly ameliorated neuronal injury  over 70% of treated animals exhibited a lesion volume < 30  and none showed MAP-2-negative areas > 5 mm<sup>2</sup>). It also improved neurological score and restored some motor outcomes to levels comparable with wild-type controls (Fig.  3A-D; Tables S15, S16).",
+        "Tese results underscore the heightened vulnerability to ischemic stroke in the absence of endogenous cortistatin and highlight its therapeutic role in mitigating strokeinduced damage."
+      ],
+      "children": [
+        {
+          "type": "page_number",
+          "content": {
+            "page_number_content": [
+              {
+                "type": "text",
+                "content": "Page 11 of 27"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  [
+    {
+      "type": "title",
+      "content": {
+        "title_content": [
+          {
+            "type": "text",
+            "content": "The neuroimmune response after stroke is dysregulated in cortistatin‑defcient mice but becomes neuroprotective following cortistatin administration"
+          }
+        ],
+        "level": 2
+      },
+      "paragraphs": [
+        "Te neuroimmune response to stroke involves intricate and coordinated CNS-peripheral immune interactions that shape both acute injury and long-term brain recovery [53]. Our transcriptomic data revealed sustained neuroinfammation in cortistatin-defcient mice poststroke. However, the intrinsic role of cortistatin in modulating systemic immune responses after stroke remains unexplored. In this context, we found that, compared to wild-type mice, animals lacking cortistatin exhibited signifcantly elevated IL-6 and MCP-1 serum levels post-MCAO, accompanied by reduced spleen mass and a trend towards lymphopenia, hallmarks of dysregulated peripheral immunity (Fig.  4A,B). Administration of cortistatin normalized IL-6, elevated IL-12, restored spleen weight and increased splenocyte count, indicating reestablishment of systemic immune balance (Fig. 4A,B).",
+        "In the brain, elevated densities of CD45<sup>+</sup> and Iba1<sup>+</sup> myeloid cells were observed in the infarct core of cortistatin-defcient mice, paralleling wild-type levels (Fig.  4C,D). However, cortistatin defciency exacerbated post-stroke myeloid cell activation. Compared to contralateral hemisphere, Iba1<sup>+</sup> cells from mice lacking cortistatin displayed a reactive morphology, characterized by reduced branching, shorter processes, increased soma size, and diminished territory area, suggesting enhanced activation (Fig.  4D,E). Interestingly, branching was signifcantly higher than in wild-type mice. Gene expression analysis revealed similar upregulation of both pro- and anti-infammatory markers between genotypes (Trem2, CD68, Iba1, TNF-α, IL-6, and Arg1), though  mice showed signifcantly reduced CD163 and IL-10 expression, indicative of impaired anti-infammatory responses (Fig. S7). Cortistatin administration to cortistatin-defcient mice selectively reduced CD45<sup>+</sup> infltrating populations without afecting Iba1<sup>+</sup> cells, suggesting distinct regulatory mechanisms. Indeed, cortistatin treatment promoted a shift toward a more ramifed Iba1<sup>+</sup> phenotype with increased IL-10, supporting a reparative glial response distinct from MCAO wild-type profles (Fig.  4C-E; Fig. S7B). Consistent with these results, the anti-infammatory action of cortistatin was further demonstrated in primary adult microglia, astrocytes, and mixed neuronal-glial cultures subjected to infammatory (LPS) or ischemia-like conditions (OGD + LPS). Under these conditions, cortistatin-defcient cells exhibited an exacerbated pro-infammatory phenotype (e.g., elevated levels of TNF-α, IL-6, and NO) that was signifcantly attenuated by exogenous cortistatin treatment  reducing cytokine levels) (Fig. S8).",
+        ""
+      ],
+      "children": [
+        {
+          "type": "page_number",
+          "content": {
+            "page_number_content": [
+              {
+                "type": "text",
+                "content": "Page 12 of 27"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  [],
+  [
+    {
+      "type": "title",
+      "content": {
+        "title_content": [
+          {
+            "type": "text",
+            "content": "Cortistatin defciency afects BBB integrity and vascular dynamics after ischemic stroke, which are normalized following cortistatin administration"
+          }
+        ],
+        "level": 2
+      },
+      "paragraphs": [
+        "Next, we investigated BBB dynamics post-stroke. Following MCAO, cortistatin-defcient mice exhibited signifcantly elevated parenchymal IgG accumulation relative to wild-type controls, indicative of substantial BBB disruption (Fig.  5A). Tis permeability likely contributes to the enhanced immune cell infltration previously observed (Fig.  4C). Analysis of vascular markers revealed that Claudin-1, Occludin, and Col1a2 levels were signifcantly reduced in the ischemic hemisphere of cortistatin-defcient mice compared to the contralateral side, while Claudin-5 expression remained unchanged (Fig.  5B). Notably, these TJ expression levels were similar to the ones found in wild-type mice. However, ZO-1 distribution was signifcantly disrupted in the absence of cortistatin, with notable loss across the endothelium (Fig.  5C). A comparable vessel density and diameter post-MCAO were observed between genotypes (Fig.  5D). Administration of cortistatin to cortistatindefcient mice signifcantly reduced IgG leakage, normalised Claudin-1 and Occludin expression, and restored ZO-1 confguration, thereby attenuating BBB disruption (Fig.  5A-C). In addition, cortistatin treatment promoted vascular remodelling, evidenced by increased vessel area and diameter within the ischemic striatum (Fig.  5D). Although TJ architecture and endothelial integrity were similarly compromised between genotypes, we observed that astrocytic responses, intrinsically related with neuroinfammation, vascular remodelling and BBB function, were disrupted in cortistatin-defcient mice. In the absence of cortistatin we found reduced glial scar formation and atypical astrocyte morphologies compared to wild-type animals (smaller soma, fewer and shorter processes and elongated morphology, increased span ratio, and reduced territorial coverage) (Fig.  5E,F). Additionally, GFAP expression, upregulated after MCAO, was signifcantly lower in cortistatin-defcient mice compared to wild-type animals. Tis was accompanied by a decrease in BDNF and GDNF compared to the contralateral hemisphere (Fig. 5G). Cortistatin treatment markedly restored astrocytic morphology and function and increased GDNF expression to similar levels seen in wild-type MCAO mice (Fig. 5E-G).",
+        "",
+        "Tese results indicate that cortistatin defciency impairs astroglial scar formation and exacerbates BBB breakdown and vascular instability, while exogenous cortistatin restores glial support, barrier integrity and vascular resilience."
+      ]
+    },
+    {
+      "type": "title",
+      "content": {
+        "title_content": [
+          {
+            "type": "text",
+            "content": "Absence of cortistatin impacts subacute stroke outcome while exogenous treatment potentiates recovery"
+          }
+        ],
+        "level": 2
+      },
+      "paragraphs": [
+        "Regarding the role of cortistatin in acute stroke, and following STAIR recommendations [54, 55], we extended our analysis to the early long-term post-stroke stage (7 days post-MCAO), focusing on key markers of injury and recovery. While neurological defcit scores were initially comparable between genotypes (Fig.  6A), animals lacking cortistatin exhibited trends toward larger infarcts, greater MAP-2-negative areas, and reduced neuronal density relative to wild-type controls (Fig. 6B; Table S15; Fig. S9A). Functional impairments persisted in Cort<sup>−/−</sup> mice, including decreased successful reaches and poorer wire-hanging test performance, although pole test results"
+      ],
+      "children": [
+        {
+          "type": "page_number",
+          "content": {
+            "page_number_content": [
+              {
+                "type": "text",
+                "content": "Page 14 of 27"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  [],
+  [],
+  [
+    {
+      "type": "title",
+      "content": {
+        "title_content": [
+          {
+            "type": "text",
+            "content": "Cortistatin regulates neuroinfammatory and vascular outcomes after stroke in 6‑month‑old mice"
+          }
+        ],
+        "level": 2
+      },
+      "paragraphs": [
+        "Next, we evaluated the infuence of cortistatin on stroke outcome in the context of premature aging, by inducing a mild MCAO in 6-month-old  and  mice, with or without cortistatin treatment, and compared results to 3-month-old MCAO animals. While standard aging models typically utilize 12–18-month-old animals, we specifcally selected this 6-month time point to investigate the accelerated aging phenotype inherent to cortistatin-defcient mice, as previously described by our laboratory [56]. Crucially, this age marks the upper limit for feasible surgical stroke induction, as older cortistatindefcient mice show very high mortality after MCAO. Tis age group also aligns with reported declines in functional performance in C57BL/6 J males [57].",
+        "",
+        "In the acute phase, cortistatin defciency in 6-monthold mice led to worsened neurological scores and behavioural defcits, paralleling fndings in younger cohorts (Fig. 7A; Fig. S10C,D). Neuronal damage, as indicated by MAP-2 loss, was signifcantly higher in older wild-type mice compared to their younger counterparts, a diference not observed between 3-month-old and 6-monthold  animals (Fig.  Table  S15). Cortistatin treatment reduced neuronal injury in wild-type mice and led to an improved score in cortistatin-defcient mice (Fig. 7A,B). Additionally, cortistatin treatment improved some behavioural outcomes in the pole test, though it demonstrated generally limited efect (Table  S16; Fig. S10C,D).",
+        "Glial analysis revealed increased  cell density and a hyper-ramifed phenotype in the ischemic hemisphere of 6-month-old  mice, with exacerbation of agedependent features relative to 3-month-old mice (Fig. 7C; Fig. S12A-D). Cortistatin administration restored a homeostatic microglial morphology in both genotypes. Acute astrocytic responses were also impaired in 6-month-old  mice, marked by disrupted glial scars and atypical astrocyte morphology (fewer junctions, reduced branching, and diminished territorial complexity), which were normalized following cortistatin administration (Fig. 7D; Fig. S12E-H).",
+        "Assessment of BBB integrity revealed no age-related diferences in IgG extravasation within genotypes; however,  mice exhibited signifcantly greater leakage than wild-type counterparts (Fig.  7E). Tis disruption was accompanied by reduced vascular density and vessel diameter in 6-month-old  mice compared to"
+      ],
+      "children": [
+        {
+          "type": "page_number",
+          "content": {
+            "page_number_content": [
+              {
+                "type": "text",
+                "content": "Page 17 of 27"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  [],
+  [
+    {
+      "type": "title",
+      "content": {
+        "title_content": [
+          {
+            "type": "text",
+            "content": "Discussion"
+          }
+        ],
+        "level": 2
+      },
+      "paragraphs": [
+        "Stroke is a systemic disorder characterized by intertwined neurovascular and immune mechanisms. Tese interactions evolve across spatiotemporal scales, shaping both tissue injury and recovery [4]. Despite progress, preclinical studies often rely on oversimplifed models that insufciently capture aging, comorbidities, and long-term outcomes, contributing to the persistent translational gap in stroke management. Defning endogenous mediators that coordinate these multi-system interactions across disease phases is therefore critical for improving both mechanistic understanding and therapeutic development.",
+        "Based on this, we employed the constitutive Cort<sup>−/−</sup> mouse model because the primary objective of this study was to establish the endogenous baseline role of cortistatin in stroke pathophysiology, and the constitutive knockout represents the canonical genetic tool. Tis approach is consistent with foundational studies using constitutive knockouts of other neuropeptides [58–61]. Te chronic absence of the gene is distinct from the acute ischemiainduced cortistatin decrease observed in wild-type mice and in human stroke patients. So, while the wild-type stroke model accurately recapitulates the clinically relevant scenario, by using cortistatin-defcient mice we demonstrated for the frst time that endogenous cortistatin limits ischemic damage and promotes recovery. Considering the heightened susceptibility of these animals to other experimental models of neural injury [14, 16], we selected a mild MCAO paradigm to minimize mortality and flament-induced endothelial injury [62]. Tis approach yields consistent infarct sizes while enabling the detection of genotype-dependent efects. Acute (48  h) and early subacute (7  days post-stroke) phases were chosen to capture the transition from injury to repair, a critical window for determining long-term outcome and assessing therapeutic efcacy [30, 31]. A major strength of this study is the incorporation of age as a biological variable. While aging is the primary risk factor for stroke vulnerability and recovery [63], most preclinical studies rely on young animals. To address this gap, we examined 3-month-old and 6-month-old mice. Our selection of the 6-month time point, rather than the conventional 12–18- month range used in aging studies, was specifcally driven by the unique biology of the cortistatin-defcient background. Preliminary data from our group described that 6-month-old mice already exhibit heightened susceptibility to neural injury and an aging-like phenotype [56], justifying the use of these specifc age cohort. Furthermore, this group represents a clinically relevant population, given the rising incidence of stroke in individuals under 70 years of age [64]. While the inclusion of older mice would have provided additional insights, they were excluded from this study due to excessive mortality and reduced model reliability, which hindered their inclusion in long-term assessments.",
+        ""
+      ]
+    },
+    {
+      "type": "title",
+      "content": {
+        "title_content": [
+          {
+            "type": "text",
+            "content": "Cortistatin as an integrative mediator in ischemia"
+          }
+        ],
+        "level": 2
+      },
+      "paragraphs": [
+        "Here, we identify cortistatin as a conserved and critical neuroimmune modulator of stroke pathophysiology. Integrative transcriptomic analysis of human and murine datasets consistently revealed a robust downregulation of cortistatin following stroke, across tissues, models, and disease stages. Tis fnding aligns with recent reports identifying cortistatin (and not somatostatin) as a DEG in the ischemic brain [65, 66], and supports its conserved involvement in cerebral ischemia. Te inverse association between cortistatin expression and stroke severity suggests a causal contribution to disease progression rather than a passive consequence of injury, raising the possibility that timely restoration of cortistatin could confer neuroprotection.",
+        "Interestingly, comparative analyses in human stroke datasets confrmed that the sustained reduction in cortistatin expression in ischemic brain regions is distinct from related neuropeptides such as somatostatin and ghrelin [66, 67]. Consistent with this, analysis of the StrokeMap database (strokemap.cn) in the photothrombotic model confrms selective downregulation of cortistatin with no signifcant change in somatostatin expression, providing model-independent validation of this specifcity [62]. Although somatostatin and neuropeptide Y-expressing interneurons are selectively preserved after ischemia [68, 69], these are not substitutes of cortistatin as it exerts unique immunomodulatory and vasoregulatory roles not shared by somatostatin [6, 70]. Reduced cortistatin expression has also been implicated in other neurodegenerative/neurovascular disorders, including Alzheimer’s disease [71] and diabetic retinopathy [72]. Moreover, the deletion of the chromosomal region containing the cortistatin gene in humans causes severe neurological defcits [73]."
+      ],
+      "children": [
+        {
+          "type": "page_number",
+          "content": {
+            "page_number_content": [
+              {
+                "type": "text",
+                "content": "Page 19 of 27"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  [
+    {
+      "type": "title",
+      "content": {
+        "title_content": [
+          {
+            "type": "text",
+            "content": "Cortistatin infuences ischemia outcomes"
+          }
+        ],
+        "level": 2
+      },
+      "paragraphs": [
+        "Cortistatin defciency markedly exacerbated ischemiainduced molecular and cellular responses. Although both wild-type and cortistatin-defcient mice activated infammatory and remodelling pathways, these responses were amplifed and prolonged in the absence of cortistatin. Transcriptomic signatures revealed heightened neuroinfammation, neurovascular dysfunction, and impaired synaptic, axonal, and plasticity-related programs, consistent with maladaptive post-ischemic responses that drive secondary injury and impede regeneration [77]. Consistent with these molecular fndings, cortistatin-defcient mice exhibited poorer neurological outcomes at acute stages across ages. Increased lesion size was observed in 3-month-old cortistatin-defcient mice, supporting a neuroprotective role for cortistatin. In contrast, lesion size did not further increase with age in cortistatin-defcient animals, consistent with evidence that infarct volume does not fully predict neurological outcome, particularly in the context of aging [25, 78, 79]. Neuronal degeneration in aged brains may converge on similar endpoints regardless of initial infarct volumes, resulting in disproportionate functional decline [80, 81]. Tese results align with previous studies demonstrating that aging primarily impairs recovery rather than increasing lesion size [80, 82, 83], further confrming the efect of cortistatin defciency on reparative pathways.",
+        "Behavioural impairments were more prevalent in cortistatin-defcient mice, although motor defcits were variable. Tis likely refects the heterogeneity of post-stroke phenotypes and the limitations of traditional behavioural assays, which may lack the sensitivity to detect subtle functional changes in mild injury models [25]. Additionally, the baseline anxiety-like behaviour previously described in the absence of cortistatin, driven by chronic glucocorticoid elevation [14], may confound motor assessments and obscure genotype-dependent defcits, underscoring the need for multidimensional functional evaluation."
+      ],
+      "children": [
+        {
+          "type": "page_number",
+          "content": {
+            "page_number_content": [
+              {
+                "type": "text",
+                "content": "Page 20 of 27"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  [
+    {
+      "type": "title",
+      "content": {
+        "title_content": [
+          {
+            "type": "text",
+            "content": "Glial dysregulation, systemic infammation"
+          }
+        ],
+        "level": 2
+      },
+      "paragraphs": []
+    },
+    {
+      "type": "title",
+      "content": {
+        "title_content": [
+          {
+            "type": "text",
+            "content": "and neuroendocrine‑immune responses"
+          }
+        ],
+        "level": 2
+      },
+      "paragraphs": [
+        "Within the CNS, cortistatin critically constrained neuroinfammation. Microglia, the CNS primary immune responders, rapidly accumulate in the peri-infarct and infarct regions after ischemia [29]. 3-month-old cortistatin-defcient mice exhibited a hyper-reactive microglial phenotype with reduced anti-infammatory markers (i.e., CD163 and IL-10), indicating amplifed neuroinfammatory response [84, 85], while older cortistatin-defcient mice showed marked microglial accumulation in the infarct core and hyper-ramifed morphologies likely associated with excitotoxicity [53, 86] and synaptic loss [87]. Transcriptomic analysis reveals enrichment of pathways associated with microglial activation, neuroinfammatory responses, apoptosis, and axonal injury in Cort<sup>−/−</sup> mice. Tis is accompanied by upregulation in cortistatin-defcient animals of key reactive glial regulators (e.g., Osm, Spp1, Fcgr1, Isg15, Cd5l), enhanced antigen presentation capacity and phagocytic signatures (e.g., Msr1, Cd74, If30), or activation of central microglial pathways (e.g., Trem2-Tyrobp, Csf1r, Cx3cr1, C1qa) supporting sustained neuroinfammation. Tese fndings align with previous evidence of exaggerated infammatory responses in cortistatin-defcient microglia and suggest that cortistatin limits maladaptive microglial activation, particularly with aging [56]. Interestingly, as chronic stress induces hyper-ramifed microglia linked to enhanced neuronal activation and impaired spatial memory [88], the stresslike behaviour of cortistatin-defcient mice may refect a pre-existing neuroinfammatory state that exacerbates ischemic pathology.",
+        "Astrocytes, which play central roles in neuroinfammation, BBB support, vascular dynamics, and tissue repair [89], were also profoundly dysregulated by cortistatin defciency. In cortistatin-defcient mice, particularly in 6-month-old animals, astrocyte reactivity was biphasic, characterized by attenuated scar formation at acute stages followed by exaggerated scarring during subacute recovery. Both extreme contexts compromise neurorepair: insufcient early containment of necrotic core may allow lesion expansion, while excessive glial fbrosis obstructs revascularization and axonal regeneration [90– 93]. Tese fndings highlight a stage-dependent dysregulation of astrocytic responses and identify cortistatin as a temporal modulator of astrocytic transitions from protective to restorative phenotypes. Moreover, astrocytes lacking cortistatin also displayed atypical morphologies, characterized by small, elongated, poorly ramifed forms, suggesting structural instability and disrupted maturation or polarization. Tese features were present at both ages, indicating that cortistatin loss may accelerate age-related astrocytic dysfunction. Recent studies demonstrating induction of pro-infammatory astrocyte states in aged ischemic brains further support this hypothesis [65]. Tese morphological alterations correlated with disturbed glial transcriptomic landscapes in cortistatindefcient animals, defned by the simultaneous presence of activated/deactivated microglial signatures and a phenotypic switch in astrocytes from homeostatic-protective to reactive-neurotoxic states. Such changes are predicted to impair metabolic support, glutamate clearance, and BBB integrity [77], thereby exacerbating post-ischemic dysfunction. Transcriptomic evidence of reduced oligodendrocyte maturation and myelination further indicates that cortistatin promotes white matter repair, essential for cognitive and motor recovery [94].",
+        "",
+        "It is well described that stroke induces not only focal brain injury but also triggers a systemic immunocompromised state, characterized by lymphoid organ atrophy and infection susceptibility [95]. In this context, cortistatin defciency intensifed infammatory transcriptional programs. Cortistatin-defcient mice displayed markedly increased immune infltration into the ischemic brain, as evidenced by histological analysis and transcriptomic deconvolution, i.e., enrichment of innate immune receptors (e.g., Tlr family members), infammatory mediators (Tnf, Il33), and chemokines (Ccl7, Ccl9, Ccl12). Concurrently, this induction of chemokines may drive leukocyte migration, myeloid cell recruitment, and neutrophil infltration pathways, while Plaur, Mmp3 and Mmp12 upregulation indicated extensive extracellular matrix remodelling consistent with blood–brain barrier disruption. Tese pro-infammatory changes were inversely mirrored by the profound downregulation of synaptic integrity genes, including Nrgn, Hpca, and Ppp1r1b, refecting loss of synaptic density and neuronal vulnerability. Tese results are consistent with previous evidence of enhanced leukocyte transmigration across cortistatindefcient endothelium [6], and position cortistatin as a molecular brake on leukocyte trafcking and vascular infammation. Although the precise mechanisms remain undefned, cortistatin may regulate immune trafcking through efects on endothelial adhesion molecules, as cortistatin-defcient brain endothelial cells upregulate integrins (Itga3, Itga4) implicated in leukocyte adhesion and migration [6]. Cortistatin-defcient mice also showed heightened pro-infammatory cytokine production, characterized by elevated IL-6, IL-12, and MCP-1, alongside reduced anti-infammatory signalling. Tese factors are strongly associated with infarct expansion, neurological deterioration, and poor long-term outcome in stroke patients [96–100], reinforcing the clinical relevance of our fndings. Finally, reduced spleen size and cellularity indicate systemic immune dysregulation linked to poor prognosis [101]."
+      ],
+      "children": [
+        {
+          "type": "page_number",
+          "content": {
+            "page_number_content": [
+              {
+                "type": "text",
+                "content": "Page 21 of 27"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  [
+    {
+      "type": "title",
+      "content": {
+        "title_content": [
+          {
+            "type": "text",
+            "content": "BBB disruption, endothelial dysfunction, and vascular aging phenotype"
+          }
+        ],
+        "level": 2
+      },
+      "paragraphs": [
+        "At the vascular level, cortistatin preserves tight junction integrity, whereas its defciency promotes vascular dysfunction and extracellular matrix remodelling (e.g., Adamts1, Tbs1) and stress-response pathway activation (e.g., Hmox1, Nfe2l2, Stat3). BBB disruption was indeed markedly exacerbated in cortistatin-defcient mice, as evidenced by increased IgG extravasation. Tis was evident in both 3-month and 6-month-old defcient animals following acute ischemia, extending previous fndings of heightened BBB vulnerability under infammatory conditions [6]. Brain endothelial cells lacking cortistatin displayed intrinsic permeability defects and amplifed sensitivity to ischemic-like conditions. Consistent with this, reduced cortistatin expression in mouse and human endothelial cells following oxygen–glucose deprivation supports its direct role in endothelial resilience [6]. Notably, 6-month-old cortistatin-defcient mice showed reduced vascular density relative to young counterparts, a diference absent in wild-type mice, indicating that cortistatin defciency accelerates premature cerebrovascular decline. Indeed, younger defcient mice recapitulated many molecular and pathological features previously described for older wild-type animals (e.g., increased infammation, interferon signalling, disrupted synaptic maintenance, exaggerated glial activation, and BBB breakdown) [65]. Tese data demonstrate a synergistic interaction between cortistatin loss and accelerated aging in driving neurovascular and neuroimmune decline."
+      ]
+    },
+    {
+      "type": "title",
+      "content": {
+        "title_content": [
+          {
+            "type": "text",
+            "content": "Therapeutic restoration of cortistatin and translational relevance"
+          }
+        ],
+        "level": 2
+      },
+      "paragraphs": [
+        "Considering the narrow therapeutic window of current reperfusion strategies, identifying efective interventions during the early post-stroke period is critical, as it can determine long-term outcome [2]. Our data demonstrate that cortistatin defciency disrupts the early activation of pathways governing infammation resolution, tissue repair, neurogenesis, synaptic plasticity, and cognitive function, resulting in defective recovery by 7 days post-injury. Specifcally, this manifests as reduced neuronal repopulation, compromised axonal integrity and myelination, aberrant glial scarring, and reduced VEGF expression, all of which severely impair neurovascular remodelling and repair [108]. Interestingly, studies from our group show that cortistatin-defcient mice exhibit myelin abnormalities in multiple sclerosis models [109], supporting a broader role for cortistatin in axonal integrity and neurorepair, though mechanisms remain unclear.",
+        "Critically, restoration of cortistatin levels conferred robust neuroprotection across multiple dimensions. Acute administration reduced brain injury and neurological defcits, normalized glial and immune responses, preserved BBB integrity, and enhanced neurotrophic factor expression, including BDNF and GDNF, which are known mediators of neurogenesis and functional recovery [110, 111]. Tese protective efects are consistent with the broad expression of cortistatin across neurovascular cell types (including GABAergic interneurons, microglia, astrocytes, pericytes, and endothelial cells) as well as across peripheral immune compartments, underscoring its pleiotropic nature. Cortistatin exerts protection through two complementary and temporally coordinated mechanisms that combine direct actions on resident neurovascular cells (demonstrated in primary glial cell cultures) and indirect efects derived from systemic immunomodulatory regulation [76], which limits peripheral immune infltration and promotes infammatory resolution. Rather than operating independently, these local and systemic arms act synergistically, reinforcing one another across the stroke continuum. While overall functional outcomes were improved after cortistatin treatment, the efect on motor recovery was limited in 6-month-old cortistatin-defcient mice. Tis may refect age-related dopaminergic dysregulation or reduced motor drive inherent to this genotype. Given the known infuence of cortistatin on motivational and locomotor circuits [10], further studies should dissect its role in corticostriatal circuitry.",
+        "Importantly, while some studies indicate that broad immune suppression may increase infection susceptibility, complicating the risk–beneft profle of anti-infammatory therapies [112], our fndings demonstrate that cortistatin exerts a context-dependent, rather than indiscriminate, modulation of glial and immune responses. Tis aligns with the emerging consensus that efective therapeutic strategies must be temporally and contextually tailored [19, 113]. Notably, these therapeutic benefts extended into the subacute phase and remained consistent across age groups, highlighting a mechanism capable of overcoming age-related resistance to neuroimmune therapies."
+      ],
+      "children": [
+        {
+          "type": "page_number",
+          "content": {
+            "page_number_content": [
+              {
+                "type": "text",
+                "content": "Page 22 of 27"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  [
+    {
+      "type": "title",
+      "content": {
+        "title_content": [
+          {
+            "type": "text",
+            "content": "Conclusions"
+          }
+        ],
+        "level": 2
+      },
+      "paragraphs": [
+        "Collectively, this study advances our understanding of stroke pathophysiology by repositioning stroke as a multisystem disorder rather than a localized cerebrovascular insult. Our results establish for the frst time cortistatin as a pleiotropic endogenous regulator in stroke, associated with the modulation of immune responses, glial homeostasis, BBB stability, and regenerative signalling across the injury-repair continuum. Its defciency triggers uncontrolled infammation and vascular failure, recapitulating an aging-like neurovascular decline, and impairing recovery. Conversely, cortistatin supplementation confers neuroprotection and promotes repair across diferent disease stages, extending the therapeutic window beyond current time-limited interventions. Te translational relevance of these fndings is further reinforced by the consistent downregulation of cortistatin in human stroke patients, positioning it as both a potential biomarker and a promising avenue for therapeutic intervention after ischemic injury."
+      ]
+    },
+    {
+      "type": "title",
+      "content": {
+        "title_content": [
+          {
+            "type": "text",
+            "content": "Study limitations and further directions"
+          }
+        ],
+        "level": 2
+      },
+      "paragraphs": [
+        "Certain limitations should be acknowledged in the context of future research, without diminishing the robustness or signifcance of the present fndings. First, experiments were conducted exclusively in male mice; incorporating female cohorts in subsequent studies will be essential to account for known sex-dependent diferences in stroke recovery and validate the generalizability of these results. Additionally, the intrinsic anxiety phenotype of cortistatin-defcient mice may introduce confounds in behavioural tasks, and observed functional trends in our cohorts should be interpreted with caution.",
+        "Second, the 6-month-old knockout mice do not represent an advanced ageing model per se; rather, this timepoint was strategically selected to investigate the early-aging phenotype inherent to cortistatin defciency, and refects the upper feasible limit for stroke induction in this genotype given the prohibitively high post-MCAO mortality observed at 8–12 months. Future studies using inducible or cell-specifc conditional models may help circumvent this constraint. Tird, while our study successfully identifes the pleiotropic efects of cortistatin and several key molecular mediators, the precise downstream signalling cascades activated upon receptor engagement in diferent brain and immune cell populations remain to be fully dissected. Finally, although bulk RNA-seq combined with orthogonal immunohistochemistry provides a comprehensive transcriptomic and structural landscape, future studies employing single-cell RNA sequencing will be invaluable to resolve cell-type-specifc responses and more precisely identify the primary cellular targets of cortistatin."
+      ],
+      "children": [
+        {
+          "type": "table",
+          "content": {
+            "image_source": {
+              "path": "images/49e34c2b49a6c83b0ebc351989f1d9a6b971c541dc1774475cd18563f2a3bfae.jpg"
+            },
+            "table_caption": [],
+            "table_footnote": [],
+            "html": "<table><tr><td>BBB</td><td>Blood-brain barrier</td></tr><tr><td>BECs</td><td>Brain endothelial cells</td></tr><tr><td>BP</td><td>Biological processes</td></tr><tr><td>BSA</td><td>Bovine serum albumin</td></tr><tr><td>CC</td><td>Cellular components</td></tr><tr><td>CD31/PECAM-1</td><td>Cluster of differentiation 31</td></tr><tr><td>CD45</td><td>Cluster of differentiation 45</td></tr><tr><td>CL</td><td>Contralateral</td></tr><tr><td>CNS</td><td>Central nervous system</td></tr><tr><td>CST</td><td>Cortistatin</td></tr><tr><td>CV</td><td>Cresyl violet</td></tr><tr><td>CVST</td><td>Cerebral venous sinus thrombosis</td></tr><tr><td>DEGs</td><td>Differentially expressed genes</td></tr><tr><td>ECs</td><td>Endothelial cells</td></tr><tr><td>ECM</td><td>Extracellular matrix</td></tr><tr><td>FDR</td><td>False discovery rate</td></tr><tr><td>GEO</td><td>Gene expression omnibus database</td></tr><tr><td>GFAP</td><td>Glial fibrillary acidic protein</td></tr><tr><td>GHSR</td><td>Ghrelin receptor</td></tr><tr><td>GO</td><td>Gene ontology</td></tr><tr><td>GSEA</td><td>Gene set enrichment analysis</td></tr><tr><td>HPA</td><td>Hypothalamic-pituitary-adrenal</td></tr><tr><td>Iba1</td><td>lonized calcium-binding adapter molecule 1</td></tr><tr><td>log2FC</td><td>Log2 fold change</td></tr><tr><td>MAP2</td><td>Microtubule-associated protein 2</td></tr><tr><td>MBP</td><td>Myelin basic protein</td></tr><tr><td>MCA</td><td>Middle cerebral artery</td></tr><tr><td>MCAO</td><td>Middle cerebral artery occlusion</td></tr><tr><td>MF</td><td>Molecular functions</td></tr><tr><td>MGPs</td><td>Marker gene profiles</td></tr><tr><td>NPC</td><td>Neural progenitor cells</td></tr><tr><td>PBMCs</td><td>Peripheral blood mononuclear cells</td></tr><tr><td>PCoA</td><td>Principal coordinates analysis</td></tr><tr><td>PT</td><td>Photothrombotic</td></tr><tr><td>rCBF</td><td>Regional cerebral blood flow]</td></tr><tr><td>rtPA</td><td>Recombinant tissue plasminogen activator</td></tr><tr><td>RPKM</td><td>Reads per kilobase of exon per million mapped fragments</td></tr><tr><td>STAIR</td><td>Stroke therapy academic industry roundtable</td></tr><tr><td>TJ</td><td>Tight-junctions</td></tr><tr><td>TNF-α</td><td>Tumour necrosis factor-alpha</td></tr><tr><td>TPM</td><td>Transcript-per-million</td></tr><tr><td>VEGF</td><td>Vascular endothelial growth factor</td></tr></table>",
+            "table_type": "simple_table",
+            "table_nest_level": 1
+          }
+        },
+        {
+          "type": "page_number",
+          "content": {
+            "page_number_content": [
+              {
+                "type": "text",
+                "content": "Page 23 of 27"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  [
+    {
+      "type": "title",
+      "content": {
+        "title_content": [
+          {
+            "type": "text",
+            "content": "Supplementary Information"
+          }
+        ],
+        "level": 2
+      },
+      "paragraphs": [],
+      "children": [
+        {
+          "type": "list",
+          "content": {
+            "list_type": "text_list",
+            "attribute": "unordered",
+            "list_items": [
+              {
+                "item_type": "text",
+                "item_content": [
+                  {
+                    "type": "text",
+                    "content": "The online version contains supplementary material available at https://doi."
+                  }
+                ]
+              },
+              {
+                "item_type": "text",
+                "item_content": [
+                  {
+                    "type": "text",
+                    "content": "org/10.1186/s12929-​026-​01271-w."
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "type": "table",
+          "content": {
+            "image_source": {
+              "path": "images/f4e40d17f6e9fecdb739c1f2d5f881baadbbe217cb92e50dcc6396ac1a1f5bca.jpg"
+            },
+            "table_caption": [],
+            "table_footnote": [],
+            "html": "<table><tr><td>Supplementary Material 1</td></tr><tr><td>Supplementary Material 2</td></tr><tr><td>Supplementary Material 3</td></tr><tr><td>Supplementary Material 4</td></tr><tr><td>Supplementary Material 5</td></tr><tr><td>Supplementary Material 6</td></tr><tr><td>Supplementary Material 7</td></tr><tr><td>Supplementary Material 8</td></tr><tr><td>Supplementary Material 9</td></tr><tr><td>Supplementary Material 10</td></tr><tr><td>Supplementary Material 11</td></tr><tr><td>Supplementary Material 12</td></tr></table>",
+            "table_type": "simple_table",
+            "table_nest_level": 1
+          }
+        }
+      ]
+    },
+    {
+      "type": "title",
+      "content": {
+        "title_content": [
+          {
+            "type": "text",
+            "content": "Acknowledgements"
+          }
+        ],
+        "level": 2
+      },
+      "paragraphs": [
+        "The authors would like to thank the Animal Care Unit and Microscopy Service Unit staf from the IPBLN for their technical support. We also acknowledge support from the PTI+ NEUROAGING, Consejo Superior de Investigaciones Científcas (CSIC), Spain."
+      ]
+    },
+    {
+      "type": "title",
+      "content": {
+        "title_content": [
+          {
+            "type": "text",
+            "content": "Author contributions"
+          }
+        ],
+        "level": 2
+      },
+      "paragraphs": [
+        "E.G-R conceived, designed, and supervised the entire study. J.C-G and E.G-R outlined the experiments and analysed all the data. J.C-G, P.V-R, I.S-M, A.C-M, and I.F-L performed the experiments. P.V-R and JL. R analysed and interpreted the transcriptomic data. J.C-G, L.B, M.P, L.H, and E.G-R contributed to data interpretation and discussion of the results. J.C-G and E.G-R wrote and revised the manuscript. All authors have read and approved the fnal version of the manuscript."
+      ]
+    },
+    {
+      "type": "title",
+      "content": {
+        "title_content": [
+          {
+            "type": "text",
+            "content": "Funding"
+          }
+        ],
+        "level": 2
+      },
+      "paragraphs": [
+        "This work was supported by the Spanish Ministry of Economy and Competitiveness (MCIN)/Spanish Research Agency (AEI)/10.13039/501100011033 gr ants: SAF2017-85602-R and PID2020-119638RB-I00 (to E.G-R.), FPU-program FPU17/02616 and Ramón Areces Foundation postdoctoral fellowship (to J.C-G.), FPI-program PRE2018-084824 (to I.S-M.), PRE2021-100172 (to P.V-R.) and FPU-program FPU23/00152 (to A.C-M); the grant PROYEXCEL_00867 from the Regional Andalusian Government (to E.G.-R.); the Swiss Science Foundation FNS 310030_212233 grant to L.H"
+      ]
+    },
+    {
+      "type": "title",
+      "content": {
+        "title_content": [
+          {
+            "type": "text",
+            "content": "Data availability"
+          }
+        ],
+        "level": 2
+      },
+      "paragraphs": [
+        "RNA-seq data are available in the GEO repository under accession number GSE302342, https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE30 2342."
+      ]
+    },
+    {
+      "type": "title",
+      "content": {
+        "title_content": [
+          {
+            "type": "text",
+            "content": "Declarations"
+          }
+        ],
+        "level": 2
+      },
+      "paragraphs": []
+    },
+    {
+      "type": "title",
+      "content": {
+        "title_content": [
+          {
+            "type": "text",
+            "content": "Ethics approval and consent to participate"
+          }
+        ],
+        "level": 2
+      },
+      "paragraphs": [
+        "Institutional Animal Care and Use Committee (IACUC): All experimental protocols employed in this study were approved by the Animal Care and Use Board and the Ethical Committee of the Spanish National Research Council (Animal Care Unit Committee IPBLN-CSIC # protocol CEEA OCT/2017.EGR) and conducted in accordance with Directive 2010/63/EU of the European Parliament on the protection of animals used for scientifc purposes. This study involves the re-analysis of publicly available human data. The original studies from which the data were obtained received ethical approval from their respective Institutional Review Boards. Therefore, a new ethical approval or informed consent was not required for this manuscript, in accordance with local legislation and institutional requirements regarding the secondary use of anonymous public data.",
+        ""
+      ]
+    },
+    {
+      "type": "title",
+      "content": {
+        "title_content": [
+          {
+            "type": "text",
+            "content": "Consent for publication"
+          }
+        ],
+        "level": 2
+      },
+      "paragraphs": [
+        "Not applicable."
+      ]
+    },
+    {
+      "type": "title",
+      "content": {
+        "title_content": [
+          {
+            "type": "text",
+            "content": "Competing interests"
+          }
+        ],
+        "level": 2
+      },
+      "paragraphs": [
+        "The authors declare no competing interests."
+      ],
+      "children": [
+        {
+          "type": "index",
+          "content": {
+            "list_type": "text_list",
+            "list_items": [
+              {
+                "item_type": "text",
+                "item_content": [
+                  {
+                    "type": "text",
+                    "content": "Received: 3 February 2026 Accepted: 13 June 2026"
+                  }
+                ]
+              },
+              {
+                "item_type": "text",
+                "item_content": [
+                  {
+                    "type": "text",
+                    "content": "Published online: 20 June 2026"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "type": "title",
+      "content": {
+        "title_content": [
+          {
+            "type": "text",
+            "content": "References"
+          }
+        ],
+        "level": 2
+      },
+      "paragraphs": [],
+      "children": [
+        {
+          "type": "list",
+          "content": {
+            "list_type": "reference_list",
+            "list_items": [
+              {
+                "item_type": "text",
+                "item_content": [
+                  {
+                    "type": "text",
+                    "content": "1. Campbell BCV, De Silva DA, Macleod MR, Coutts SB, Schwamm LH, Davis SM, et al. Ischaemic stroke. Nat Rev Dis Primers. 2019;5:1–22. https://doi.org/10.1038/s41572-​019-​0118-8."
+                  }
+                ]
+              },
+              {
+                "item_type": "text",
+                "item_content": [
+                  {
+                    "type": "text",
+                    "content": "2. Iadecola C, Anrather J. The immunology of stroke: from mechanisms to translation. Nat Med. 2011;17:796–808. https://doi.org/10.1038/nm. 2399."
+                  }
+                ]
+              },
+              {
+                "item_type": "text",
+                "item_content": [
+                  {
+                    "type": "text",
+                    "content": "3. Drieu A, Levard D, Vivien D, Rubio M. Anti-infammatory treatments for stroke: from bench to bedside. Ther Adv Neurol Disord. 2018;11:1756286418789854. https://doi.org/10.1177/1756286418 789854."
+                  }
+                ]
+              },
+              {
+                "item_type": "text",
+                "item_content": [
+                  {
+                    "type": "text",
+                    "content": "4. Anrather J, Iadecola C. Infammation and Stroke: An Overview. Neurotherapeutics. 2016;13:661–70. https://doi.org/10.1007/ s13311-​016-​0483-x."
+                  }
+                ]
+              },
+              {
+                "item_type": "text",
+                "item_content": [
+                  {
+                    "type": "text",
+                    "content": "5. de Lecea L, del Rio JA, Criado JR, Alcántara S, Morales M, Danielson PE, et al. Cortistatin is expressed in a distinct subset of cortical interneurons. J Neurosci. 1997;17:5868–80. https://doi.org/10.1523/JNEUROSCI. 17-​15-​05868.1997."
+                  }
+                ]
+              },
+              {
+                "item_type": "text",
+                "item_content": [
+                  {
+                    "type": "text",
+                    "content": "6. Castillo-González J, Ruiz JL, Serrano-Martínez I, Forte-Lago I, Ubago-Rodriguez A, Caro M, et al. Cortistatin defciency reveals a dysfunctional brain endothelium with impaired gene pathways, exacerbated immune activation, and disrupted barrier integrity. J Neuroinfammation. 2023;20:226. https://doi.org/10.1186/s12974-​023-​02908-5."
+                  }
+                ]
+              },
+              {
+                "item_type": "text",
+                "item_content": [
+                  {
+                    "type": "text",
+                    "content": "7. Pérez Falo C. Papel del neuropéptido cortistatina en la fsiopatología de los procesos de des- y remielinización en el sistema nervioso [Internet]. Universidad de Granada; 2021. https://dialnet.unirioja.es/servlet/tesis? codigo=295627"
+                  }
+                ]
+              },
+              {
+                "item_type": "text",
+                "item_content": [
+                  {
+                    "type": "text",
+                    "content": "8. Serrano Martínez I. Papel de cortistatina en la dinámica neuroinmunológica en el adulto en condiciones fsiológicas y patológicas [Internet]. Universidad de Granada; 2024. https://digibug.ugr.es/handle/ 10481/97390"
+                  }
+                ]
+              },
+              {
+                "item_type": "text",
+                "item_content": [
+                  {
+                    "type": "text",
+                    "content": "9. Dalm V, van Hagen PM, van Koetsveld PM, Achilefu S, Houtsmuller AB, Pols DHJ, et al. Expression of somatostatin, cortistatin, and somatostatin receptors in human monocytes, macrophages, and dendritic cells. Am J Physiol Endocrinol Metab. 2003;285:E344-353. https://doi.org/10.1152/ ajpendo.00048.2003."
+                  }
+                ]
+              },
+              {
+                "item_type": "text",
+                "item_content": [
+                  {
+                    "type": "text",
+                    "content": "10. de Lecea L, Criado JR, Prospero-Garcia O, Gautvik KM, Schweitzer P, Danielson PE, et al. A cortical neuropeptide with neuronal depressant and sleep-modulating properties. Nature. 1996;381:242–5. https://doi. org/10.1038/381242a0."
+                  }
+                ]
+              },
+              {
+                "item_type": "text",
+                "item_content": [
+                  {
+                    "type": "text",
+                    "content": "11. Delgado M, Gonzalez-Rey E. Role of Cortistatin in the Stressed Immune System. In: Savino W, Guaraldi F, editors. Front Horm Res 2017. https:// doi.org/10.1159/000452910"
+                  }
+                ]
+              },
+              {
+                "item_type": "text",
+                "item_content": [
+                  {
+                    "type": "text",
+                    "content": "12. Córdoba-Chacón J, Gahete MD, Pozo-Salas AI, Martínez-Fuentes AJ, de Lecea L, Gracia-Navarro F, et al. Cortistatin is not a somatostatin analogue but stimulates prolactin release and inhibits GH and ACTH in a gender-dependent fashion: potential role of ghrelin. Endocrinology. 2011;152:4800–12. https://doi.org/10.1210/en.2011-​1542."
+                  }
+                ]
+              },
+              {
+                "item_type": "text",
+                "item_content": [
+                  {
+                    "type": "text",
+                    "content": "13. Deghenghi R, Papotti M, Ghigo E, Muccioli G. Cortistatin, but not somatostatin, binds to growth hormone secretagogue (GHS) receptors of human pituitary gland. J Endocrinol Invest. 2001;24:RC1–3. https:// doi.org/10.1007/BF03343800"
+                  }
+                ]
+              },
+              {
+                "item_type": "text",
+                "item_content": [
+                  {
+                    "type": "text",
+                    "content": "14. Souza-Moreira L, Morell M, Delgado-Maroto V, Pedreño M, Martinez-Escudero L, Caro M, et al. Paradoxical efect of cortistatin treatment and its defciency on experimental autoimmune encephalomyelitis. J"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "type": "page_number",
+          "content": {
+            "page_number_content": [
+              {
+                "type": "text",
+                "content": "Page 24 of 27"
+              }
+            ]
+          }
+        },
+        {
+          "type": "page_number",
+          "content": {
+            "page_number_content": [
+              {
+                "type": "text",
+                "content": "ZO-1"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  [],
+  [],
+  [
+    {
+      "type": "title",
+      "content": {
+        "title_content": [
+          {
+            "type": "text",
+            "content": "Publisher’s Note"
+          }
+        ],
+        "level": 2
+      },
+      "paragraphs": [
+        "Springer Nature remains neutral with regard to jurisdictional claims in published maps and institutional afliations."
+      ],
+      "children": [
+        {
+          "type": "page_number",
+          "content": {
+            "page_number_content": [
+              {
+                "type": "text",
+                "content": "Page 27 of 27"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+]

@@ -23,6 +23,8 @@ from typing import Any, Dict, List
 
 import pymupdf as fitz
 import structlog
+import json
+import copy
 from celery import signature
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 
@@ -325,3 +327,203 @@ def _extract_sections(
 
     doc.close()
     return sections, page_count
+
+
+# ─────────────────────────────────────────────────────────────────────────────
+# JSON Helpers
+# ─────────────────────────────────────────────────────────────────────────────
+
+def _group_by_title_preserve_structure(raw_data):
+    # Menangani kasus list bersarang (nested list)
+    if isinstance(raw_data, list) and len(raw_data) > 0 and isinstance(raw_data[0], list):
+        raw_data = [item for sublist in raw_data for item in sublist]
+
+    grouped_data = []
+    current_group = None
+
+    for item in raw_data:
+        # Pastikan item adalah dictionary
+        if not isinstance(item, dict):
+            continue
+            
+        item_type = item.get("type")
+        
+        if item_type == "title":
+            # Gunakan deepcopy agar tidak mengubah (mutate) data asli dari input
+            current_group = copy.deepcopy(item)
+            
+            # Tambahkan array/list kosong untuk menampung object paragraphs nantinya
+            current_group["paragraphs"] = []
+            current_group["assets"] = []
+            
+            # Masukkan ke dalam list hasil akhir
+            grouped_data.append(current_group)
+            
+        elif item_type == "paragraph":
+            # Jika ada paragraf di awal dokumen sebelum title pertama muncul
+            if current_group is None:
+                current_group = {
+                    "type": "title",
+                    "content": {
+                        "title_content": [{"type": "text", "content": "Untitled"}],
+                        "level": 0
+                    },
+                    "paragraphs": [],
+                    "charts": [],
+                    "images": [],
+                }
+                grouped_data.append(current_group)
+                
+            # Masukkan object UTUH (tanpa merubah bentuknya) ke array
+            current_group["paragraphs"].append(copy.deepcopy(item))
+
+        elif item_type == "chart" or item_type == "image":
+            # Pastikan current_group yang sedang aktif sudah memiliki kunci "charts"
+            if "assets" not in current_group:
+                current_group["assets"] = []
+
+            if item_type == "chart":
+                # 1. Buat salinan (deepcopy) dari item chart agar data sumber tidak berubah
+                chart_item = copy.deepcopy(item)
+                
+                # 2. Proses penggabungan (join) chart_caption
+                # Ambil array chart_caption dengan aman menggunakan .get()
+                caption_fragments = chart_item.get("content", {}).get("chart_caption", [])
+                
+                # Pastikan caption_fragments adalah list sebelum di-loop
+                if isinstance(caption_fragments, list):
+                    joined_caption = " ".join([
+                        piece.get("content", "") 
+                        for piece in caption_fragments if isinstance(piece, dict)
+                    ]).strip()
+                    
+                    # Opsi A: Ubah bentuknya langsung menjadi String
+                    chart_item["content"]["chart_caption"] = joined_caption
+                    
+                # 3. Penanganan jika chart muncul sebelum ada title di awal dokumen
+                if current_group is None:
+                    current_group = {
+                        "type": "title", # Tetap jadikan title sebagai wadah (container) grup
+                        "content": {
+                            "title_content": [{"type": "text", "content": "Untitled"}],
+                            "level": 0
+                        },
+                        "paragraphs": [],
+                        "assets": [], # Tambahkan array assets di sini
+                    }
+                    grouped_data.append(current_group)
+                    
+                # 4. Masukkan object chart yang caption-nya sudah di-join ke array
+                # TODO: image_source replace with markdown to image link
+                image_source = chart_item["content"]["image_source"]["path"]
+                caption = chart_item["content"]["chart_caption"]
+                chart_item.update({ 
+                    "content": f'![{caption}]({image_source}) {caption}' 
+                })
+                current_group["assets"].append(chart_item)
+
+            elif item_type == "image":
+                # 1. Buat salinan (deepcopy) dari item image agar data sumber tidak berubah
+                image_item = copy.deepcopy(item)
+                
+                # 2. Proses penggabungan (join) image_caption
+                # Ambil array image_caption dengan aman menggunakan .get()
+                caption_fragments = image_item.get("content", {}).get("image_caption", [])
+                
+                # Pastikan caption_fragments adalah list sebelum di-loop
+                if isinstance(caption_fragments, list):
+                    joined_caption = " ".join([
+                        piece.get("content", "") 
+                        for piece in caption_fragments if isinstance(piece, dict)
+                    ]).strip()
+                    
+                    # Opsi A: Ubah bentuknya langsung menjadi String
+                    image_item["content"]["image_caption"] = joined_caption
+                
+                # 3. Penanganan jika image muncul sebelum ada title di awal dokumen
+                if current_group is None:
+                    current_group = {
+                        "type": "title", # Tetap jadikan title sebagai wadah (container) grup
+                        "content": {
+                            "title_content": [{"type": "text", "content": "Untitled"}],
+                            "level": 0
+                        },
+                        "paragraphs": [],
+                        "assets": [], # Tambahkan array assets di sini
+                    }
+                    grouped_data.append(current_group)
+                
+                # 4. Masukkan object image yang caption-nya sudah di-join ke array
+                # TODO: image_source replace with markdown to image link
+                image_source = image_item["content"]["image_source"]["path"]
+                caption = image_item["content"]["image_caption"]
+                image_item.update({ 
+                    "content": f'![{caption}]({image_source}) {caption}' 
+                })
+                current_group["assets"].append(image_item)
+        
+    return grouped_data
+
+def _clean_mineru_result(data: str) -> List[Dict[str, Any]]:
+    """
+    Membersihkan output MinerU:
+    - hapus bbox
+    - gabungkan paragraph_content -> content string
+    - hapus page_header dan page_footnote
+    """
+
+    cleaned_pages = []
+
+    for page in data:
+        cleaned_page = []
+
+        for item in page:
+            item_type = item.get("type")
+
+            # Skip header & footnote
+            if item_type in {"page_header", "page_footnote", "page_number"}:
+                continue
+
+            new_item = {
+                "type": item_type
+            }
+
+            # Khusus paragraph
+            if item_type == "paragraph":
+                paragraph_content = (
+                    item.get("content", {})
+                    .get("paragraph_content", [])
+                )
+                
+                texts = []
+
+                for block in paragraph_content:
+                    if block.get("type") == "text":
+                        texts.append(block.get("content", ""))
+                    
+                    if block.get("type") == "equation_inline":
+                        texts.append(block.get("content", ""))
+     
+                joined_content = " ".join(texts).strip()
+                if (len(joined_content) > 15):
+                    new_item["content"] = joined_content
+                else:
+                    continue
+
+            else:
+                # selain paragraph, copy content apa adanya
+                new_item["content"] = item.get("content")
+
+            cleaned_page.append(new_item)
+        cleaned_pages.append(cleaned_page)
+    return cleaned_pages
+
+def _json_to_chunks(json_path: Path) -> List[Dict[str, Any]]:
+    with open(str(json_path), "r", encoding="utf-8") as file:
+        data = json.load(file)
+    
+    cleaned_data = _clean_mineru_result(data)
+    grouped_by_title = _group_by_title_preserve_structure(cleaned_data)
+    
+    with open("grouped_by_title.json", "w", encoding="utf-8") as f:
+        json.dump(grouped_by_title, f, ensure_ascii=False, indent=2)

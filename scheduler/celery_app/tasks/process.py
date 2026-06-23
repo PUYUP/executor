@@ -357,6 +357,10 @@ def _group_by_title_preserve_structure(raw_data):
             current_group["assets"] = []
             
             # Masukkan ke dalam list hasil akhir
+            title_contents = item.get("content", {}).get("title_content", [])
+            current_group.update({
+                "content": " ".join([x.get("content", "") for x in title_contents])
+            })
             grouped_data.append(current_group)
             
         elif item_type == "paragraph":

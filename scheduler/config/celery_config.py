@@ -7,6 +7,16 @@ Loaded via: app.config_from_object("config.celery_config")
 
 from config.settings import settings
 
+# ─── Task Discovery ───────────────────────────────────────────────────────────
+# Listed explicitly — autodiscover with related_name="" is unreliable in Docker.
+# Every module with @app.task must appear here.
+imports = (
+    "celery_app.tasks.scrape",
+    "celery_app.tasks.process",
+    "celery_app.tasks.embed",
+    "celery_app.tasks.maintenance",
+)
+
 # ─── Broker & Backend ─────────────────────────────────────────────────────────
 broker_url                  = settings.redis_url
 result_backend              = settings.redis_url
@@ -33,15 +43,15 @@ worker_prefetch_multiplier  = 1               # one task at a time per worker sl
 
 # ─── Retry Defaults (each task can override) ──────────────────────────────────
 task_annotations = {
-    "tasks.scrape.*": {
+    "celery_app.tasks.scrape.*": {
         "max_retries": 5,
         "default_retry_delay": 60,
     },
-    "tasks.process.*": {
+    "celery_app.tasks.process.*": {
         "max_retries": 3,
         "default_retry_delay": 120,
     },
-    "tasks.embed.*": {
+    "celery_app.tasks.embed.*": {
         "max_retries": 10,
         "default_retry_delay": 30,
         "rate_limit": "20/m",        # stay under embedding API rate limit
@@ -51,21 +61,21 @@ task_annotations = {
 # ─── Task Routing ─────────────────────────────────────────────────────────────
 task_routes = {
     # ── Scrape tier ──
-    "tasks.scrape.scrape_topic":          {"queue": "scrape"},
-    "tasks.scrape.scrape_paper_metadata": {"queue": "scrape"},
-    "tasks.scrape.download_pdf":          {"queue": "scrape"},
+    "celery_app.tasks.scrape.scrape_topic":          {"queue": "scrape"},
+    "celery_app.tasks.scrape.scrape_paper_metadata": {"queue": "scrape"},
+    "celery_app.tasks.scrape.download_pdf":          {"queue": "scrape"},
 
     # ── Process tier ──
-    "tasks.process.parse_pdf":            {"queue": "process"},
-    "tasks.process.clean_text":           {"queue": "process"},
-    "tasks.process.chunk_document":       {"queue": "process"},
+    "celery_app.tasks.process.parse_pdf":            {"queue": "process"},
+    "celery_app.tasks.process.clean_text":           {"queue": "process"},
+    "celery_app.tasks.process.chunk_document":       {"queue": "process"},
 
     # ── Embed tier ──
-    "tasks.embed.generate_embeddings":    {"queue": "embed"},
-    "tasks.embed.store_chunks":           {"queue": "embed"},
+    "celery_app.tasks.embed.generate_embeddings":    {"queue": "embed"},
+    "celery_app.tasks.embed.store_chunks":           {"queue": "embed"},
 
     # ── Maintenance ──
-    "tasks.maintenance.*":                {"queue": "default"},
+    "celery_app.tasks.maintenance.*":                {"queue": "default"},
 }
 
 # ─── Worker ───────────────────────────────────────────────────────────────────

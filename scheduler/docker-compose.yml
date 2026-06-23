@@ -50,7 +50,7 @@ services:
   celery-beat:
     <<: *celery-common
     command: >
-      celery -A src.main beat
+      celery -A celery_app.main beat
       --loglevel=info
       --scheduler celery.beat.PersistentScheduler
       --schedule /app/logs/celerybeat-schedule
@@ -62,7 +62,7 @@ services:
   worker-scrape:
     <<: *celery-common
     command: >
-      celery -A src.main worker
+      celery -A celery_app.main worker
       --loglevel=info
       --queues=scrape
       --concurrency=8
@@ -77,7 +77,7 @@ services:
   worker-process:
     <<: *celery-common
     command: >
-      celery -A src.main worker
+      celery -A celery_app.main worker
       --loglevel=info
       --queues=process
       --concurrency=4
@@ -92,7 +92,7 @@ services:
   worker-embed:
     <<: *celery-common
     command: >
-      celery -A src.main worker
+      celery -A celery_app.main worker
       --loglevel=info
       --queues=embed
       --concurrency=2
@@ -107,7 +107,7 @@ services:
   flower:
     <<: *celery-common
     command: >
-      celery -A src.main flower
+      celery -A celery_app.main flower
       --port=5555
       --url-prefix=flower
       --max-tasks=10000

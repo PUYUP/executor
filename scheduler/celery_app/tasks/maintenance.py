@@ -20,7 +20,7 @@ from typing import Any, Dict, List, cast
 import redis
 import structlog
 
-from main import app
+from celery_app.main import app
 from config.settings import settings
 
 log = structlog.get_logger(__name__)

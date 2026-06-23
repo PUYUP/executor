@@ -1,5 +1,5 @@
 """
-tasks/scrape.py
+celery_app/tasks/scrape.py
 ───────────────────────────
 Tier-1 tasks (queue: scrape)
 ─────────────────────────────────────────────────────────────────────────
@@ -13,16 +13,14 @@ Flow:
 
 from __future__ import annotations
 
-import hashlib
-import os
 from pathlib import Path
-from typing import Any, Dict, List, Optional
+from typing import Any, Dict, List
 from dataclasses import asdict
 
 import arxiv
 import httpx
 import structlog
-from celery import chord, group, signature
+from celery import group, signature
 from tenacity import (
     retry,
     retry_if_exception_type,
@@ -30,9 +28,9 @@ from tenacity import (
     wait_exponential,
 )
 
-from main import app
-from utils.dedup import is_already_processed, mark_as_queued
-from utils.paper_schema import PaperMetadata
+from celery_app.main import app
+from celery_app.utils.dedup import is_already_processed, mark_as_queued
+from celery_app.utils.paper_schema import PaperMetadata
 from config.settings import settings
 
 log = structlog.get_logger(__name__)
@@ -43,7 +41,7 @@ log = structlog.get_logger(__name__)
 # ─────────────────────────────────────────────────────────────────────────────
 
 @app.task(
-    name="tasks.scrape.scrape_topic",
+    name="celery_app.tasks.scrape.scrape_topic",
     bind=True,
     max_retries=3,
     default_retry_delay=300,
@@ -105,7 +103,7 @@ def scrape_topic(
 # ─────────────────────────────────────────────────────────────────────────────
 
 @app.task(
-    name="tasks.scrape.scrape_paper_metadata",
+    name="celery_app.tasks.scrape.scrape_paper_metadata",
     bind=True,
     max_retries=5,
     default_retry_delay=60,
@@ -137,7 +135,7 @@ def scrape_paper_metadata(self, arxiv_id: str) -> Dict[str, Any]:
         pdf_url=paper.pdf_url,
         doi=paper.doi or "",
         journal_ref=paper.journal_ref or "",
-        primary_category=paper.primary_category.term if paper.primary_category else "",
+        # primary_category=paper.primary_category.term if paper.primary_category else "",
     )
 
     log.info(
@@ -146,17 +144,19 @@ def scrape_paper_metadata(self, arxiv_id: str) -> Dict[str, Any]:
         title=metadata.title[:60],
     )
 
+    metadata_dict = metadata.model_dump(exclude_none=True)
+
     # Chain: download_pdf → parse_pdf (process queue)
     (
-        download_pdf.s(asdict(metadata)).set(queue="scrape")
+        download_pdf.s(metadata_dict).set(queue="scrape")
         | signature(
-            "tasks.process.parse_pdf",
+            "celery_app.tasks.process.parse_pdf",
             queue="process",
             immutable=False,
         )
     ).apply_async()
 
-    return asdict(metadata)
+    return metadata_dict
 
 
 # ─────────────────────────────────────────────────────────────────────────────
@@ -164,7 +164,7 @@ def scrape_paper_metadata(self, arxiv_id: str) -> Dict[str, Any]:
 # ─────────────────────────────────────────────────────────────────────────────
 
 @app.task(
-    name="tasks.scrape.download_pdf",
+    name="celery_app.tasks.scrape.download_pdf",
     bind=True,
     max_retries=5,
     default_retry_delay=120,

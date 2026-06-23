@@ -17,19 +17,17 @@ from config.logging import configure_logging
 
 def create_celery_app() -> Celery:
     app = Celery("arxiv_rag")
-
     app.config_from_object("config.celery_config")
-
-    # Auto-discover tasks in tasks/*.py
-    app.autodiscover_tasks(
-        packages=["tasks"],
-        related_name="",
-        force=True,
-    )
-
+    # Explicit imports are more reliable than autodiscover across Docker
+    # bind-mount layouts — every task module must be listed here.
+    app.conf.include = [
+        "celery_app.tasks.scrape",
+        "celery_app.tasks.process",
+        "celery_app.tasks.embed",
+        "celery_app.tasks.maintenance",
+    ]
     _configure_queues(app)
     _configure_beat_schedule(app)
-
     return app
 
 
@@ -90,7 +88,7 @@ def _configure_beat_schedule(app: Celery) -> None:
         # ── Main ingestion: every 6 hours per topic ──
         **{
             f"scrape-{topic.replace(' ', '-')}-periodic": {
-                "task": "tasks.scrape.scrape_topic",
+                "task": "celery_app.tasks.scrape.scrape_topic",
                 "schedule": settings.scrape_interval_seconds,
                 "args": [topic],
                 "kwargs": {"max_results": settings.max_results_per_topic},
@@ -100,13 +98,13 @@ def _configure_beat_schedule(app: Celery) -> None:
         },
         # ── Retry dead-letter queue items every hour ──
         "retry-failed-scrape": {
-            "task": "tasks.maintenance.retry_dead_letters",
+            "task": "celery_app.tasks.maintenance.retry_dead_letters",
             "schedule": 3600,
             "args": ["dlx.scrape"],
             "options": {"queue": "default"},
         },
         "retry-failed-process": {
-            "task": "tasks.maintenance.retry_dead_letters",
+            "task": "celery_app.tasks.maintenance.retry_dead_letters",
             "schedule": 3600,
             "args": ["dlx.process"],
             "options": {"queue": "default"},

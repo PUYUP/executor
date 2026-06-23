@@ -18,17 +18,16 @@ Design notes:
 
 from __future__ import annotations
 
-import re
 from pathlib import Path
-from typing import Any, Dict, List, Optional
+from typing import Any, Dict, List
 
 import pymupdf as fitz
 import structlog
 from celery import signature
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 
-from main import app
-from utils.text_cleaner import clean_academic_text
+from celery_app.main import app
+from celery_app.utils.text_cleaner import clean_academic_text
 from config.settings import settings
 
 log = structlog.get_logger(__name__)
@@ -39,7 +38,7 @@ log = structlog.get_logger(__name__)
 # ─────────────────────────────────────────────────────────────────────────────
 
 @app.task(
-    name="tasks.process.parse_pdf",
+    name="celery_app.process.parse_pdf",
     bind=True,
     max_retries=3,
     default_retry_delay=120,
@@ -114,7 +113,7 @@ def parse_pdf(self, metadata: Dict[str, Any]) -> Dict[str, Any]:
         clean_text.s(metadata).set(queue="process")
         | chunk_document.s().set(queue="process")
         | signature(
-            "tasks.embed.generate_embeddings",
+            "celery_app.tasks.embed.generate_embeddings",
             queue="embed",
             immutable=False,
         )
@@ -128,7 +127,7 @@ def parse_pdf(self, metadata: Dict[str, Any]) -> Dict[str, Any]:
 # ─────────────────────────────────────────────────────────────────────────────
 
 @app.task(
-    name="tasks.process.clean_text",
+    name="celery_app.tasks.process.clean_text",
     bind=True,
     max_retries=2,
     queue="process",
@@ -169,7 +168,7 @@ def clean_text(self, metadata: Dict[str, Any]) -> Dict[str, Any]:
 # ─────────────────────────────────────────────────────────────────────────────
 
 @app.task(
-    name="tasks.process.chunk_document",
+    name="celery_app.tasks.process.chunk_document",
     bind=True,
     max_retries=2,
     queue="process",

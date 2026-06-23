@@ -1,5 +1,5 @@
 """
-celery_app/utils/text_cleaner.py
+utils/text_cleaner.py
 ──────────────────────────────────
 Cleans raw text extracted from ArXiv PDFs before chunking.
 

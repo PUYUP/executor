@@ -16,7 +16,7 @@ COPY . .
 
 # Install dependencies (INI YANG HILANG SEBELUMNYA)
 RUN pip install --upgrade pip setuptools wheel \
-    && pip install --no-cache-dir .
+    && pip install -e .
 
 # Create user
 RUN groupadd -r celery && useradd -r -g celery celery

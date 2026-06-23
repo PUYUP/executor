@@ -25,8 +25,8 @@ from typing import Any, Dict, List
 
 import structlog
 
-from main import app
-from utils.embedder import get_embedder
+from celery_app.main import app
+from celery_app.utils.embedder import get_embedder
 from config.settings import settings
 
 log = structlog.get_logger(__name__)
@@ -165,7 +165,7 @@ def store_chunks(self, metadata: Dict[str, Any]) -> Dict[str, Any]:
         raise self.retry(exc=exc)
 
     # Mark this paper as fully processed so scrape_topic won't re-queue it
-    from utils.dedup import mark_as_processed
+    from celery_app.utils.dedup import mark_as_processed
     mark_as_processed(arxiv_id)
 
     # Clean up the local PDF to reclaim disk space

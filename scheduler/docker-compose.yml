@@ -1,5 +1,6 @@
 ########################################################################
-#  ArXiv RAG Pipeline — Docker Compose (FIXED)
+#  ArXiv RAG Pipeline — Docker Compose
+#  Services: Redis, Worker (3 tiers), Beat Scheduler, Flower
 ########################################################################
 
 x-celery-common: &celery-common

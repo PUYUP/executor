@@ -22,7 +22,7 @@ import re
 from pathlib import Path
 from typing import Any, Dict, List, Optional
 
-import fitz  # PyMuPDF
+import pymupdf as fitz
 import structlog
 from celery import signature
 from langchain_text_splitters import RecursiveCharacterTextSplitter
@@ -265,7 +265,8 @@ def _extract_sections(
 
     # Collect all text blocks with font info
     raw_blocks: List[Dict] = []
-    for page_num, page in enumerate(doc):
+    for page_num in range(page_count):
+        page = doc.load_page(page_num)
         blocks = page.get_text("dict", flags=fitz.TEXT_PRESERVE_WHITESPACE)["blocks"]
         for block in blocks:
             if block["type"] != 0:          # skip image blocks

@@ -5,6 +5,7 @@ from pathlib import Path
 from datetime import datetime
 from celery_app.tasks.scrape import scrape_paper_metadata, download_pdf
 from celery_app.tasks.process import parse_pdf, clean_text, chunk_document, _json_to_chunks
+from docling.document_converter import DocumentConverter
 
 
 def save_chunks_to_json(chunks, arxiv_id: str, output_dir: str = "output"):
@@ -45,9 +46,17 @@ def main_x():
 
 
 def main():
-    path = '/Volumes/SSD1/Private/Curio/indexer/executor/s12929-026-01271-w/auto/s12929-026-01271-w_content_list_v2.json'
-    chunks = _json_to_chunks(Path(path))
-    print(chunks)
+    # path = '/Volumes/SSD1/Private/Curio/indexer/executor/s12929-026-01271-w/auto/s12929-026-01271-w_content_list_v2.json'
+    # chunks = _json_to_chunks(Path(path))
+    # print(chunks)
+    source = "/Volumes/Wgaming/Users/pointilis/Downloads/2512.00565v1.pdf"  # file path or URL
+
+    converter = DocumentConverter()
+    result = converter.convert(source=source)
+    print(result)
+    # doc = converter.convert(source).document
+
+    # print(doc.export_to_markdown())
 
 
 if __name__ == "__main__":

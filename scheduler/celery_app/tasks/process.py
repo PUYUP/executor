@@ -359,7 +359,7 @@ def _group_by_title_preserve_structure(raw_data):
             # Masukkan ke dalam list hasil akhir
             title_contents = item.get("content", {}).get("title_content", [])
             current_group.update({
-                "content": " ".join([x.get("content", "") for x in title_contents])
+                "content": " ".join([x.get("content", "").replace('\xa0', ' ') for x in title_contents])
             })
             grouped_data.append(current_group)
             
@@ -397,7 +397,7 @@ def _group_by_title_preserve_structure(raw_data):
                 # Pastikan caption_fragments adalah list sebelum di-loop
                 if isinstance(caption_fragments, list):
                     joined_caption = " ".join([
-                        piece.get("content", "") 
+                        piece.get("content", "").replace('\xa0', ' ')
                         for piece in caption_fragments if isinstance(piece, dict)
                     ]).strip()
                     
@@ -437,7 +437,7 @@ def _group_by_title_preserve_structure(raw_data):
                 # Pastikan caption_fragments adalah list sebelum di-loop
                 if isinstance(caption_fragments, list):
                     joined_caption = " ".join([
-                        piece.get("content", "") 
+                        piece.get("content", "").replace('\xa0', ' ') 
                         for piece in caption_fragments if isinstance(piece, dict)
                     ]).strip()
                     

@@ -1,15 +1,7 @@
 [
   {
     "type": "title",
-    "content": {
-      "title_content": [
-        {
-          "type": "text",
-          "content": "Lack of cortistatin drives neuroimmune and vascular dysfunction in brain ischemia"
-        }
-      ],
-      "level": 1
-    },
+    "content": "Lack of cortistatin drives neuroimmune and vascular dysfunction in brain ischemia",
     "paragraphs": [
       {
         "type": "paragraph",
@@ -25,15 +17,7 @@
   },
   {
     "type": "title",
-    "content": {
-      "title_content": [
-        {
-          "type": "text",
-          "content": "Abstract"
-        }
-      ],
-      "level": 2
-    },
+    "content": "Abstract",
     "paragraphs": [
       {
         "type": "paragraph",
@@ -60,15 +44,7 @@
   },
   {
     "type": "title",
-    "content": {
-      "title_content": [
-        {
-          "type": "text",
-          "content": "Introduction"
-        }
-      ],
-      "level": 2
-    },
+    "content": "Introduction",
     "paragraphs": [
       {
         "type": "paragraph",
@@ -95,15 +71,7 @@
   },
   {
     "type": "title",
-    "content": {
-      "title_content": [
-        {
-          "type": "text",
-          "content": "Materials and methods Peptides"
-        }
-      ],
-      "level": 2
-    },
+    "content": "Materials and methods Peptides",
     "paragraphs": [
       {
         "type": "paragraph",
@@ -114,15 +82,7 @@
   },
   {
     "type": "title",
-    "content": {
-      "title_content": [
-        {
-          "type": "text",
-          "content": "Animals"
-        }
-      ],
-      "level": 2
-    },
+    "content": "Animals",
     "paragraphs": [
       {
         "type": "paragraph",
@@ -133,15 +93,7 @@
   },
   {
     "type": "title",
-    "content": {
-      "title_content": [
-        {
-          "type": "text",
-          "content": "Transient middle cerebral artery occlusion model"
-        }
-      ],
-      "level": 2
-    },
+    "content": "Transient middle cerebral artery occlusion model",
     "paragraphs": [
       {
         "type": "paragraph",
@@ -160,15 +112,7 @@
   },
   {
     "type": "title",
-    "content": {
-      "title_content": [
-        {
-          "type": "text",
-          "content": "Neurological and behavioural assessments"
-        }
-      ],
-      "level": 2
-    },
+    "content": "Neurological and behavioural assessments",
     "paragraphs": [
       {
         "type": "paragraph",
@@ -183,15 +127,7 @@
   },
   {
     "type": "title",
-    "content": {
-      "title_content": [
-        {
-          "type": "text",
-          "content": "Ischemic lesion volume determination"
-        }
-      ],
-      "level": 2
-    },
+    "content": "Ischemic lesion volume determination",
     "paragraphs": [
       {
         "type": "paragraph",
@@ -206,15 +142,7 @@
   },
   {
     "type": "title",
-    "content": {
-      "title_content": [
-        {
-          "type": "text",
-          "content": "Immunofuorescence"
-        }
-      ],
-      "level": 2
-    },
+    "content": "Immunofuorescence",
     "paragraphs": [
       {
         "type": "paragraph",
@@ -225,15 +153,7 @@
   },
   {
     "type": "title",
-    "content": {
-      "title_content": [
-        {
-          "type": "text",
-          "content": "Morphometric analyses of microglial phenotypes"
-        }
-      ],
-      "level": 2
-    },
+    "content": "Morphometric analyses of microglial phenotypes",
     "paragraphs": [
       {
         "type": "paragraph",
@@ -244,15 +164,7 @@
   },
   {
     "type": "title",
-    "content": {
-      "title_content": [
-        {
-          "type": "text",
-          "content": "Isolation of adult microglia and astrocytes"
-        }
-      ],
-      "level": 2
-    },
+    "content": "Isolation of adult microglia and astrocytes",
     "paragraphs": [
       {
         "type": "paragraph",
@@ -263,15 +175,7 @@
   },
   {
     "type": "title",
-    "content": {
-      "title_content": [
-        {
-          "type": "text",
-          "content": "LPS and oxygen–glucose deprivation and reoxygenation exposure"
-        }
-      ],
-      "level": 2
-    },
+    "content": "LPS and oxygen–glucose deprivation and reoxygenation exposure",
     "paragraphs": [
       {
         "type": "paragraph",
@@ -282,15 +186,7 @@
   },
   {
     "type": "title",
-    "content": {
-      "title_content": [
-        {
-          "type": "text",
-          "content": "Determination of the peripheral immune response"
-        }
-      ],
-      "level": 2
-    },
+    "content": "Determination of the peripheral immune response",
     "paragraphs": [
       {
         "type": "paragraph",
@@ -305,15 +201,7 @@
   },
   {
     "type": "title",
-    "content": {
-      "title_content": [
-        {
-          "type": "text",
-          "content": "RNA extraction and evaluation of gene expression"
-        }
-      ],
-      "level": 2
-    },
+    "content": "RNA extraction and evaluation of gene expression",
     "paragraphs": [
       {
         "type": "paragraph",
@@ -324,15 +212,7 @@
   },
   {
     "type": "title",
-    "content": {
-      "title_content": [
-        {
-          "type": "text",
-          "content": "Next‑generation transcriptome sequencing (RNA‑seq) and data analysis"
-        }
-      ],
-      "level": 2
-    },
+    "content": "Next‑generation transcriptome sequencing (RNA‑seq) and data analysis",
     "paragraphs": [
       {
         "type": "paragraph",
@@ -351,15 +231,7 @@
   },
   {
     "type": "title",
-    "content": {
-      "title_content": [
-        {
-          "type": "text",
-          "content": "Integration of human and mouse datasets for cortistatin gene expression analysis"
-        }
-      ],
-      "level": 2
-    },
+    "content": "Integration of human and mouse datasets for cortistatin gene expression analysis",
     "paragraphs": [
       {
         "type": "paragraph",
@@ -370,15 +242,7 @@
   },
   {
     "type": "title",
-    "content": {
-      "title_content": [
-        {
-          "type": "text",
-          "content": "Ethical approval and consent to participate"
-        }
-      ],
-      "level": 2
-    },
+    "content": "Ethical approval and consent to participate",
     "paragraphs": [
       {
         "type": "paragraph",
@@ -393,15 +257,7 @@
   },
   {
     "type": "title",
-    "content": {
-      "title_content": [
-        {
-          "type": "text",
-          "content": "Statistical analysis"
-        }
-      ],
-      "level": 2
-    },
+    "content": "Statistical analysis",
     "paragraphs": [
       {
         "type": "paragraph",
@@ -412,29 +268,13 @@
   },
   {
     "type": "title",
-    "content": {
-      "title_content": [
-        {
-          "type": "text",
-          "content": "Results"
-        }
-      ],
-      "level": 2
-    },
+    "content": "Results",
     "paragraphs": [],
     "assets": []
   },
   {
     "type": "title",
-    "content": {
-      "title_content": [
-        {
-          "type": "text",
-          "content": "Cortistatin is downregulated in ischemic stroke"
-        }
-      ],
-      "level": 2
-    },
+    "content": "Cortistatin is downregulated in ischemic stroke",
     "paragraphs": [
       {
         "type": "paragraph",
@@ -445,15 +285,7 @@
   },
   {
     "type": "title",
-    "content": {
-      "title_content": [
-        {
-          "type": "text",
-          "content": "Defciency in cortistatin enhances immune activity, vascular disorganization, and neurodegenerative responses following ischemic stroke"
-        }
-      ],
-      "level": 2
-    },
+    "content": "Defciency in cortistatin enhances immune activity, vascular disorganization, and neurodegenerative responses following ischemic stroke",
     "paragraphs": [
       {
         "type": "paragraph",
@@ -489,15 +321,7 @@
   },
   {
     "type": "title",
-    "content": {
-      "title_content": [
-        {
-          "type": "text",
-          "content": "Ischemic stroke induces the downregulation of both cortistatin and its receptors"
-        }
-      ],
-      "level": 2
-    },
+    "content": "Ischemic stroke induces the downregulation of both cortistatin and its receptors",
     "paragraphs": [
       {
         "type": "paragraph",
@@ -508,15 +332,7 @@
   },
   {
     "type": "title",
-    "content": {
-      "title_content": [
-        {
-          "type": "text",
-          "content": "Lack of cortistatin exacerbates cell‑type marker gene profles following ischemic stroke"
-        }
-      ],
-      "level": 2
-    },
+    "content": "Lack of cortistatin exacerbates cell‑type marker gene profles following ischemic stroke",
     "paragraphs": [
       {
         "type": "paragraph",
@@ -572,15 +388,7 @@
   },
   {
     "type": "title",
-    "content": {
-      "title_content": [
-        {
-          "type": "text",
-          "content": "Cortistatin defciency exacerbates stroke‑induced neurodegeneration, which is mitigated after cortistatin treatment"
-        }
-      ],
-      "level": 2
-    },
+    "content": "Cortistatin defciency exacerbates stroke‑induced neurodegeneration, which is mitigated after cortistatin treatment",
     "paragraphs": [
       {
         "type": "paragraph",
@@ -644,15 +452,7 @@
   },
   {
     "type": "title",
-    "content": {
-      "title_content": [
-        {
-          "type": "text",
-          "content": "The neuroimmune response after stroke is dysregulated in cortistatin‑defcient mice but becomes neuroprotective following cortistatin administration"
-        }
-      ],
-      "level": 2
-    },
+    "content": "The neuroimmune response after stroke is dysregulated in cortistatin‑defcient mice but becomes neuroprotective following cortistatin administration",
     "paragraphs": [
       {
         "type": "paragraph",
@@ -720,15 +520,7 @@
   },
   {
     "type": "title",
-    "content": {
-      "title_content": [
-        {
-          "type": "text",
-          "content": "Cortistatin defciency afects BBB integrity and vascular dynamics after ischemic stroke, which are normalized following cortistatin administration"
-        }
-      ],
-      "level": 2
-    },
+    "content": "Cortistatin defciency afects BBB integrity and vascular dynamics after ischemic stroke, which are normalized following cortistatin administration",
     "paragraphs": [
       {
         "type": "paragraph",
@@ -743,15 +535,7 @@
   },
   {
     "type": "title",
-    "content": {
-      "title_content": [
-        {
-          "type": "text",
-          "content": "Absence of cortistatin impacts subacute stroke outcome while exogenous treatment potentiates recovery"
-        }
-      ],
-      "level": 2
-    },
+    "content": "Absence of cortistatin impacts subacute stroke outcome while exogenous treatment potentiates recovery",
     "paragraphs": [
       {
         "type": "paragraph",
@@ -907,15 +691,7 @@
   },
   {
     "type": "title",
-    "content": {
-      "title_content": [
-        {
-          "type": "text",
-          "content": "Cortistatin regulates neuroinfammatory and vascular outcomes after stroke in 6‑month‑old mice"
-        }
-      ],
-      "level": 2
-    },
+    "content": "Cortistatin regulates neuroinfammatory and vascular outcomes after stroke in 6‑month‑old mice",
     "paragraphs": [
       {
         "type": "paragraph",
@@ -1015,15 +791,7 @@
   },
   {
     "type": "title",
-    "content": {
-      "title_content": [
-        {
-          "type": "text",
-          "content": "Discussion"
-        }
-      ],
-      "level": 2
-    },
+    "content": "Discussion",
     "paragraphs": [
       {
         "type": "paragraph",
@@ -1038,15 +806,7 @@
   },
   {
     "type": "title",
-    "content": {
-      "title_content": [
-        {
-          "type": "text",
-          "content": "Cortistatin as an integrative mediator in ischemia"
-        }
-      ],
-      "level": 2
-    },
+    "content": "Cortistatin as an integrative mediator in ischemia",
     "paragraphs": [
       {
         "type": "paragraph",
@@ -1069,15 +829,7 @@
   },
   {
     "type": "title",
-    "content": {
-      "title_content": [
-        {
-          "type": "text",
-          "content": "Cortistatin infuences ischemia outcomes"
-        }
-      ],
-      "level": 2
-    },
+    "content": "Cortistatin infuences ischemia outcomes",
     "paragraphs": [
       {
         "type": "paragraph",
@@ -1092,29 +844,13 @@
   },
   {
     "type": "title",
-    "content": {
-      "title_content": [
-        {
-          "type": "text",
-          "content": "Glial dysregulation, systemic infammation"
-        }
-      ],
-      "level": 2
-    },
+    "content": "Glial dysregulation, systemic infammation",
     "paragraphs": [],
     "assets": []
   },
   {
     "type": "title",
-    "content": {
-      "title_content": [
-        {
-          "type": "text",
-          "content": "and neuroendocrine‑immune responses"
-        }
-      ],
-      "level": 2
-    },
+    "content": "and neuroendocrine‑immune responses",
     "paragraphs": [
       {
         "type": "paragraph",
@@ -1137,15 +873,7 @@
   },
   {
     "type": "title",
-    "content": {
-      "title_content": [
-        {
-          "type": "text",
-          "content": "BBB disruption, endothelial dysfunction, and vascular aging phenotype"
-        }
-      ],
-      "level": 2
-    },
+    "content": "BBB disruption, endothelial dysfunction, and vascular aging phenotype",
     "paragraphs": [
       {
         "type": "paragraph",
@@ -1156,15 +884,7 @@
   },
   {
     "type": "title",
-    "content": {
-      "title_content": [
-        {
-          "type": "text",
-          "content": "Therapeutic restoration of cortistatin and translational relevance"
-        }
-      ],
-      "level": 2
-    },
+    "content": "Therapeutic restoration of cortistatin and translational relevance",
     "paragraphs": [
       {
         "type": "paragraph",
@@ -1187,15 +907,7 @@
   },
   {
     "type": "title",
-    "content": {
-      "title_content": [
-        {
-          "type": "text",
-          "content": "Conclusions"
-        }
-      ],
-      "level": 2
-    },
+    "content": "Conclusions",
     "paragraphs": [
       {
         "type": "paragraph",
@@ -1206,15 +918,7 @@
   },
   {
     "type": "title",
-    "content": {
-      "title_content": [
-        {
-          "type": "text",
-          "content": "Study limitations and further directions"
-        }
-      ],
-      "level": 2
-    },
+    "content": "Study limitations and further directions",
     "paragraphs": [
       {
         "type": "paragraph",
@@ -1229,29 +933,13 @@
   },
   {
     "type": "title",
-    "content": {
-      "title_content": [
-        {
-          "type": "text",
-          "content": "Supplementary Information"
-        }
-      ],
-      "level": 2
-    },
+    "content": "Supplementary Information",
     "paragraphs": [],
     "assets": []
   },
   {
     "type": "title",
-    "content": {
-      "title_content": [
-        {
-          "type": "text",
-          "content": "Acknowledgements"
-        }
-      ],
-      "level": 2
-    },
+    "content": "Acknowledgements",
     "paragraphs": [
       {
         "type": "paragraph",
@@ -1262,15 +950,7 @@
   },
   {
     "type": "title",
-    "content": {
-      "title_content": [
-        {
-          "type": "text",
-          "content": "Author contributions"
-        }
-      ],
-      "level": 2
-    },
+    "content": "Author contributions",
     "paragraphs": [
       {
         "type": "paragraph",
@@ -1281,15 +961,7 @@
   },
   {
     "type": "title",
-    "content": {
-      "title_content": [
-        {
-          "type": "text",
-          "content": "Funding"
-        }
-      ],
-      "level": 2
-    },
+    "content": "Funding",
     "paragraphs": [
       {
         "type": "paragraph",
@@ -1300,15 +972,7 @@
   },
   {
     "type": "title",
-    "content": {
-      "title_content": [
-        {
-          "type": "text",
-          "content": "Data availability"
-        }
-      ],
-      "level": 2
-    },
+    "content": "Data availability",
     "paragraphs": [
       {
         "type": "paragraph",
@@ -1319,29 +983,13 @@
   },
   {
     "type": "title",
-    "content": {
-      "title_content": [
-        {
-          "type": "text",
-          "content": "Declarations"
-        }
-      ],
-      "level": 2
-    },
+    "content": "Declarations",
     "paragraphs": [],
     "assets": []
   },
   {
     "type": "title",
-    "content": {
-      "title_content": [
-        {
-          "type": "text",
-          "content": "Ethics approval and consent to participate"
-        }
-      ],
-      "level": 2
-    },
+    "content": "Ethics approval and consent to participate",
     "paragraphs": [
       {
         "type": "paragraph",
@@ -1352,29 +1000,13 @@
   },
   {
     "type": "title",
-    "content": {
-      "title_content": [
-        {
-          "type": "text",
-          "content": "Consent for publication"
-        }
-      ],
-      "level": 2
-    },
+    "content": "Consent for publication",
     "paragraphs": [],
     "assets": []
   },
   {
     "type": "title",
-    "content": {
-      "title_content": [
-        {
-          "type": "text",
-          "content": "Competing interests"
-        }
-      ],
-      "level": 2
-    },
+    "content": "Competing interests",
     "paragraphs": [
       {
         "type": "paragraph",
@@ -1385,29 +1017,13 @@
   },
   {
     "type": "title",
-    "content": {
-      "title_content": [
-        {
-          "type": "text",
-          "content": "References"
-        }
-      ],
-      "level": 2
-    },
+    "content": "References",
     "paragraphs": [],
     "assets": []
   },
   {
     "type": "title",
-    "content": {
-      "title_content": [
-        {
-          "type": "text",
-          "content": "Publisher’s Note"
-        }
-      ],
-      "level": 2
-    },
+    "content": "Publisher’s Note",
     "paragraphs": [
       {
         "type": "paragraph",
